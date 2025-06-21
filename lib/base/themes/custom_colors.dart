@@ -25,6 +25,7 @@ class CustomColor {
   static Color selected = HexColor('#27B059');
   static Color rejected = HexColor('#DC3A3A');
   static Color backgroundScaffoldColor = HexColor('#185F90');
+  static Color whiteShadeColor = HexColor('#EEF0F7');
 
 
   static Color whiteColor = HexColor('#FFFFFF');

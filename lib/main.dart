@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:sooqyria/base/themes/token.dart';
@@ -13,7 +12,6 @@ import 'languages/strings.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await AppInitializer.init();
-
 
   runApp(const MyApp());
 }
@@ -34,8 +32,7 @@ class MyApp extends StatelessWidget {
         title: Strings.appName,
         theme: ThemeData(
           fontFamily: 'Inter',
-          scaffoldBackgroundColor:
-              CustomColor.whiteColor, // ✅ White background for all screens
+          scaffoldBackgroundColor: CustomColor.whiteColor,
         ),
         getPages: Routes.list,
 

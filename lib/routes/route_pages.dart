@@ -3,6 +3,39 @@ part of '../routes/routes.dart';
 class RoutePageList {
   static var list = [
     GetPage(
+      name: Routes.favoriteScreen,
+      page: () => const FavoriteScreen(),
+      binding: FavoriteBinding(),
+    ),
+    
+    GetPage(
+      name: Routes.MenusScreen,
+      page: () => const MenusScreen(),
+      binding: MenusBinding(),
+    ),
+
+
+    
+    GetPage(
+      name: Routes.inboxScreen,
+      page: () => const InboxScreen(),
+      binding: InboxBinding(),
+    ),
+
+    
+    GetPage(
+      name: Routes.homeScreen,
+      page: () => const HomeScreen(),
+      binding: HomeBinding(),
+    ),
+    
+    GetPage(
+      name: Routes.navigationScreen,
+      page: () => const NavigationScreen(),
+      binding: NavigationBinding(),
+    ),
+
+    GetPage(
       name: Routes.set_passwordScreen,
       page: () => const SetPasswordScreen(),
       binding: SetPasswordBinding(),

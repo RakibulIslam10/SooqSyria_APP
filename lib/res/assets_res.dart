@@ -8,11 +8,11 @@ class AssetsRes {
 
   static const String PROJECT_NAME = 'sooqyria';
   static const String PROJECT_VERSION = '1.0.0+1';
-  static const String SUCCESS = 'assets/icons/success.svg';
-  static const String APPLE = 'assets/logo/Apple.png';
-  static const String APPTEXT = 'assets/logo/apptext.png';
-  static const String FB = 'assets/logo/fb.png';
-  static const String GOOGLE = 'assets/logo/google.png';
-  static const String LOGO = 'assets/logo/logo.png';
-  static const String ONBOARD_LOGO = 'assets/logo/onboard_logo.png';
+  static const String VECTOR = 'assets/icons/Vector.svg';
+  static const String BAG_1 = 'assets/images/bag 1.png';
+  static const String CAR = 'assets/images/car.png';
+  static const String HOME_1 = 'assets/images/home 1.png';
+  static const String JOB = 'assets/images/job.png';
+  static const String PAWPRINT_1 = 'assets/images/pawprint 1.png';
+  static const String SERVICE = 'assets/images/service.png';
 }

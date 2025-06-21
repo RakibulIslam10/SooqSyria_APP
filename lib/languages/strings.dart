@@ -162,16 +162,29 @@ class Strings {
   static const String verifyCode = "Verify Code";
   static const String checkYourEmail = "Check your email";
   static const String setANewPassword = "Set a new password";
-  static const String setANewPasswordDes = "Create a new password. Ensure it differs from\n purposes ones for security";
+  static const String setANewPasswordDes =
+      "Create a new password. Ensure it differs from\n purposes ones for security";
   static const String haventGotTheEmail = "Haven’t got the email yet?";
   static const String resendEmail = " Resend email";
   static const String forgotPassword = "Forgot Password";
   static const String enterYourNewPass = "Enter your new password";
   static const String reenterYourNewPass = "Re-enter password";
-  static const String forgotPassdesc = "Please enter your email to reset the password";
+  static const String forgotPassdesc =
+      "Please enter your email to reset the password";
   static const String updatePassword = "Update Password";
+  static const String home = "Home";
+  static const String favorite = "Favorites";
+  static const String menu = "Menu";
+  static const String inbox = "Inbox";
+  static const String whatsNewOnsSoqSyria = "What’s new on sooqsyria";
+  static const String search = "Search";
+  static const String recentSearch = "Recent Search";
+  static const String recommendedListings = "Recommended Listings";
+  static const String popularInRealState = "Popular in Real Estate";
+  static const String popularInProduct = "Popular in Products";
+  static const String popularInCar = "Popular in Cars";
+  static const String keepLookingFo = "Keep looking for";
 
-  static const String otpDesc = "We sent a reset link to contact@dscode...com\nenter 5 digit code that mentioned in the email";
-
-
+  static const String otpDesc =
+      "We sent a reset link to contact@dscode...com\nenter 5 digit code that mentioned in the email";
 }

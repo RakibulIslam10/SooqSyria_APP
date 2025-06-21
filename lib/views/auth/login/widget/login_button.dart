@@ -10,7 +10,7 @@ class LoginButton extends GetView<LoginController> {
         PrimaryButton(
           title: Strings.login,
           onPressed: () {
-            Get.toNamed(Routes.registerScreen);
+            Get.toNamed(Routes.navigationScreen);
           },
         ),
         Sizes.height.betweenInputBox,

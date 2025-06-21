@@ -86,9 +86,11 @@ class $Icons {
 
   String get reject => 'assets/icons/reject.svg';
   String get success => 'assets/icons/success.svg';
+  String get notification => 'assets/icons/notification.svg';
+  String get back => 'assets/icons/Vector.svg';
 
 
-  List<dynamic> get values => [verified, empty, reject, success,];
+  List<dynamic> get values => [verified, empty, reject, success,back];
 }
 
 class $Logo {
