@@ -52,8 +52,7 @@ class TextWidget extends StatelessWidget {
         child: Padding(
           padding: padding,
           child: Text(
-
-            text,
+            text.tr,
             style: style != null
                 ? style!.copyWith(
               color: color ?? _color(colorShade),

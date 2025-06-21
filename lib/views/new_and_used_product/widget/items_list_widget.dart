@@ -32,6 +32,8 @@ class ItemsListWidget extends GetView<NewAndUsedProductController> {
           color: CustomColor.primary,
           fontWeight: FontWeight.w500,
         ),
+        Divider(),
+
 
         ...List.generate(
           categoriesList.length,

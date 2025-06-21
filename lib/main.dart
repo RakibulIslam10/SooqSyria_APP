@@ -4,9 +4,8 @@ import 'package:get/get.dart';
 import 'package:sooqyria/base/themes/token.dart';
 import 'package:sooqyria/routes/routes.dart';
 import 'package:sooqyria/views/splash/controller/splash_controller.dart';
-
-import 'base/maintenance/maintenance_dialog.dart';
 import 'initializer.dart';
+import 'languages/localization.dart';
 import 'languages/strings.dart';
 
 void main() async {
@@ -27,6 +26,9 @@ class MyApp extends StatelessWidget {
       ensureScreenSize: true,
       designSize: const Size(375, 812),
       builder: (_, child) => GetMaterialApp(
+        translations: Languages(),
+        locale: Locale('en', 'US'),
+        fallbackLocale: Locale('en', 'US'),
         debugShowCheckedModeBanner: false,
         initialRoute: Routes.splashScreen,
         title: Strings.appName,
@@ -34,20 +36,18 @@ class MyApp extends StatelessWidget {
           fontFamily: 'Inter',
           scaffoldBackgroundColor: CustomColor.whiteColor,
         ),
-        getPages: Routes.list,
 
+        getPages: Routes.list,
         initialBinding: BindingsBuilder(() {
-          Get.put(SystemMaintenanceController());
-          Get.lazyPut(() => SplashController()); //was dashboard controller
+          Get.lazyPut(() => SplashController()); // your initial binding
         }),
+
         builder: (context, widget) {
           ScreenUtil.init(context);
           return MediaQuery(
-            data: MediaQuery.of(
-              context,
-            ).copyWith(textScaler: TextScaler.linear(1.0)),
+            data: MediaQuery.of(context).copyWith(textScaler: TextScaler.linear(1.0)),
             child: Directionality(
-              textDirection: TextDirection.ltr,
+              textDirection: Get.locale?.languageCode == 'ar' ? TextDirection.rtl : TextDirection.ltr,  // dynamic RTL/LTR based on locale
               child: widget!,
             ),
           );

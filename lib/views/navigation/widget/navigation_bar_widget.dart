@@ -22,8 +22,10 @@ class NavigationBarWidget extends StatelessWidget {
         children: [
           Expanded(
             child: Padding(
-              padding:
-                  EdgeInsets.only(left: 0.5, top: Dimensions.paddingSize * 0.2),
+              padding: EdgeInsets.only(
+                left: 0.5,
+                top: Dimensions.paddingSize * 0.2,
+              ),
               child: BottomItem(
                 icon: Icons.home_outlined,
                 label: Strings.home,
@@ -33,7 +35,16 @@ class NavigationBarWidget extends StatelessWidget {
           ),
           Expanded(
             child: Padding(
-              padding: EdgeInsets.only(top: Dimensions.paddingSize * 0.2,right: Dimensions.widthSize * 4),
+              padding: EdgeInsets.only(
+                top: Dimensions.paddingSize * 0.2,
+                right: Get.locale?.languageCode == 'ar'
+                    ? 0
+                    : Dimensions.widthSize * 4,
+                left: Get.locale?.languageCode == 'ar'
+                    ? Dimensions.widthSize * 4
+                    : 0,
+              ),
+
               child: BottomItem(
                 icon: Icons.favorite_border,
                 label: Strings.favorite,
@@ -43,7 +54,15 @@ class NavigationBarWidget extends StatelessWidget {
           ),
           Expanded(
             child: Padding(
-              padding: EdgeInsets.only(top: Dimensions.paddingSize * 0.2,left: Dimensions.widthSize * 4),
+              padding: EdgeInsets.only(
+                top: Dimensions.paddingSize * 0.2,
+                left: Get.locale?.languageCode == 'ar'
+                    ? 0
+                    : Dimensions.widthSize * 4,
+                right: Get.locale?.languageCode == 'ar'
+                    ? Dimensions.widthSize * 4
+                    : 0,
+              ),
               child: BottomItem(
                 icon: Icons.mark_chat_read_outlined,
                 label: Strings.inbox,

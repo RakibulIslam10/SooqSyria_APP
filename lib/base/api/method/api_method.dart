@@ -3,8 +3,6 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:http/http.dart' as http;
 import '../../../routes/routes.dart';
-import '../../maintenance/maintenance_dialog.dart';
-import '../../maintenance/maintenance_model.dart';
 import '../../utils/basic_import.dart';
 import '../../utils/local_storage.dart';
 import '../../widgets/logger.dart';
@@ -79,8 +77,6 @@ class ApiMethod {
         Get.offAllNamed(Routes.loginScreen);
         LocalStorage.clear();
       }
-
-      _maintenanceCheck(isMaintenance, response.body);
 
       if (response.statusCode == code) {
         return jsonDecode(response.body);
@@ -176,7 +172,6 @@ class ApiMethod {
           '|📒📒📒|-----------------[[ POST ]] method response end --------------------|📒📒📒|');
       bool isMaintenance = response.statusCode == 503;
 
-      _maintenanceCheck(isMaintenance, response.body);
 
       // Check Unauthorized
       if (response.statusCode == 401) {
@@ -286,7 +281,6 @@ class ApiMethod {
           '|📒📒📒|-----------------[[ POST ]] method response end --------------------|📒📒📒|');
       bool isMaintenance = response.statusCode == 503;
 
-      _maintenanceCheck(isMaintenance, jsonData);
 
       if (response.statusCode == code) {
         return jsonDecode(jsonData.body) as Map<String, dynamic>;
@@ -396,7 +390,6 @@ class ApiMethod {
         Get.offAllNamed(Routes.loginScreen);
         LocalStorage.clear();
       }
-      _maintenanceCheck(isMaintenance, jsonData);
 
       if (response.statusCode == code) {
         return jsonDecode(jsonData.body) as Map<String, dynamic>;
@@ -447,15 +440,4 @@ class ApiMethod {
     }
   }
 
-  void _maintenanceCheck(bool isMaintenance, var jsonData) {
-    final controller = Get.put(SystemMaintenanceController());
-    if (isMaintenance) {
-      controller.maintenanceStatus.value = true;
-      MaintenanceModel maintenanceModel =
-          MaintenanceModel.fromJson(jsonDecode(jsonData));
-      MaintenanceDialog().show(maintenanceModel: maintenanceModel);
-    } else {
-      controller.maintenanceStatus.value = false;
-    }
-  }
 }

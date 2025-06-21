@@ -10,8 +10,8 @@ class NavigationController extends GetxController {
 
   List<Widget> bodyPages = [
     HomeScreen(),
-    InboxScreen(),
     FavoriteScreen(),
+    InboxScreen(),
     MenusScreen(),
   ];
 

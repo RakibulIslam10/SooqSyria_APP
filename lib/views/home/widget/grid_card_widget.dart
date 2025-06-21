@@ -5,32 +5,32 @@ class GridCardWidget extends GetView<HomeController> {
 
   final List<Map<String, dynamic>> categories = [
     {
-      'title': 'Vehicles',
+      'title': Strings.vehicles,
       'image': 'assets/images/Vehicles.png',
       'route': Routes.vehiclesScreen,
     },
     {
-      'title': 'Real Estate',
+      'title': Strings.realEState,
       'image': 'assets/images/home 1.png',
       'route': Routes.real_stateScreen,
     },
     {
-      'title': 'Job Offers',
+      'title': Strings.jobOffers,
       'image': 'assets/images/job.png',
       'route': Routes.job_offersScreen,
     },
     {
-      'title': 'New & Used Products',
+      'title': Strings.newAndUsedProduct,
       'image': 'assets/images/bag 1.png',
       'route': Routes.new_and_used_productScreen,
     },
     {
-      'title': 'Animals',
+      'title': Strings.animals,
       'image': 'assets/images/pawprint 1.png',
       'route': Routes.animalsScreen,
     },
     {
-      'title': 'Services',
+      'title': Strings.services,
       'image': 'assets/images/pawprint 1.png',
       'route': Routes.servicesScreen,
     },
