@@ -12,6 +12,7 @@ import 'package:sooqyria/views/auth/reset_password_otp_screen/screen/reset_passw
 import '../bindings/Menus_binding.dart';
 import '../bindings/animals_binding.dart';
 import '../bindings/favorite_binding.dart';
+import '../bindings/favorited_items_binding.dart';
 import '../bindings/home_binding.dart';
 import '../bindings/inbox_binding.dart';
 import '../bindings/job_offers_binding.dart';
@@ -30,6 +31,7 @@ import '../views/Menus/screen/Menus_screen.dart';
 import '../views/animals/screen/animals_screen.dart';
 import '../views/auth/login/screen/login_screen.dart';
 import '../views/favorite/screen/favorite_screen.dart';
+import '../views/favorited_items/screen/favorited_items_screen.dart';
 import '../views/home/screen/home_screen.dart';
 import '../views/inbox/screen/inbox_screen.dart';
 import '../views/job_offers/screen/job_offers_screen.dart';
@@ -70,4 +72,5 @@ class Routes {
   static const String new_and_used_productScreen = '/new_and_used_productScreen';
   static const String animalsScreen = '/animalsScreen';
   static const String servicesScreen = '/servicesScreen';
+  static const String favorited_itemsScreen = '/favorited_itemsScreen';
 }

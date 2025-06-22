@@ -126,6 +126,7 @@ class Strings {
 
   static const String allFavourites = "All Favourites";
   static const String Default = "Default";
+  static const String viewALl = "View All";
   static const String youHaveNoFavoritesSavedOnThisList =
       "You have no favorites saved on this list";
   static const String useTheFavoriteIconToSaveAdsThatYouWantToCheckLatter =

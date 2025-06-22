@@ -3,6 +3,12 @@ part of '../routes/routes.dart';
 class RoutePageList {
   static var list = [
     GetPage(
+      name: Routes.favorited_itemsScreen,
+      page: () => const FavoritedItemsScreen(),
+      binding: FavoritedItemsBinding(),
+    ),
+    
+    GetPage(
       name: Routes.servicesScreen,
       page: () => const ServicesScreen(),
       binding: ServicesBinding(),

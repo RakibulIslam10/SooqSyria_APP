@@ -39,15 +39,18 @@ class MyApp extends StatelessWidget {
 
         getPages: Routes.list,
         initialBinding: BindingsBuilder(() {
-          Get.lazyPut(() => SplashController()); // your initial binding
+          Get.lazyPut(() => SplashController());
         }),
-
         builder: (context, widget) {
           ScreenUtil.init(context);
           return MediaQuery(
-            data: MediaQuery.of(context).copyWith(textScaler: TextScaler.linear(1.0)),
+            data: MediaQuery.of(
+              context,
+            ).copyWith(textScaler: TextScaler.linear(1.0)),
             child: Directionality(
-              textDirection: Get.locale?.languageCode == 'ar' ? TextDirection.rtl : TextDirection.ltr,  // dynamic RTL/LTR based on locale
+              textDirection: Get.locale?.languageCode == 'ar'
+                  ? TextDirection.rtl
+                  : TextDirection.ltr,
               child: widget!,
             ),
           );
