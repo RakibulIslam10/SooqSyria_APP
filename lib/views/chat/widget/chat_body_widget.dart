@@ -43,11 +43,22 @@ class ChatBodyWidget extends GetView<ChatController> {
                             bottomLeft: Radius.circular(Dimensions.radius),
                           ),
                         ),
-                        child: TextWidget(
-                          message.text,
-                          fontSize: MediaQuery.of(context).size.width * 0.04,
-                          color: Colors.white,
-                        ),
+                        child: message.imageUrl != null
+                            ? ClipRRect(
+                                borderRadius: BorderRadius.circular(12),
+                                child: Image.file(
+                                  File(message.imageUrl!),
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.5,
+                                  fit: BoxFit.cover,
+                                ),
+                              )
+                            : TextWidget(
+                                message.text ?? '',
+                                fontSize:
+                                    MediaQuery.of(context).size.width * 0.04,
+                                color: isMe ? Colors.white : Colors.black,
+                              ),
                       ),
                     ),
                     Wrap(
@@ -133,12 +144,24 @@ class ChatBodyWidget extends GetView<ChatController> {
                                   ),
                                 ),
                               ),
-                              child: TextWidget(
-                                message.text,
-                                fontSize:
-                                    MediaQuery.of(context).size.width * 0.04,
-                                color: Colors.black,
-                              ),
+                              child: message.imageUrl != null
+                                  ? ClipRRect(
+                                      borderRadius: BorderRadius.circular(12),
+                                      child: Image.file(
+                                        File(message.imageUrl!),
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                            0.5,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    )
+                                  : TextWidget(
+                                      message.text ?? '',
+                                      fontSize:
+                                          MediaQuery.of(context).size.width *
+                                          0.04,
+                                      color: isMe ? Colors.white : Colors.black,
+                                    ),
                             ),
                           ),
                           TextWidget(

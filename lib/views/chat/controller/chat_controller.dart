@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 
 import '../model/chat_message_model.dart';
 
 class ChatController extends GetxController {
-
   final messageList = <MessageModel>[].obs;
   final textController = TextEditingController();
   final scrollController = ScrollController();
@@ -29,4 +29,16 @@ class ChatController extends GetxController {
     });
   }
 
+  final ImagePicker _picker = ImagePicker();
+
+  void sendImageMessage(String imagePath) {
+    messageList.add(MessageModel(imageUrl: imagePath, isMe: true));
+  }
+
+  Future<void> pickImageFromGallery() async {
+    final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
+    if (image != null) {
+      sendImageMessage(image.path);
+    }
+  }
 }

@@ -1,6 +1,7 @@
 class MessageModel {
-  final String text;
+  final String? text;
+  final String? imageUrl;
   final bool isMe;
 
-  MessageModel({required this.text, required this.isMe});
+  MessageModel({this.text, this.imageUrl, required this.isMe});
 }

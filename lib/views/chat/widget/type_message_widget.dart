@@ -23,15 +23,18 @@ class TypeMessageWidget extends GetView<ChatController> {
                     Icons.emoji_emotions_outlined,
                     color: CustomColor.grayColor,
                   ),
-                  suffixIcon: Padding(
-                    padding: EdgeInsets.all(12),
-                    // optional, controls spacing
-                    child: SvgPicture.asset(
-                      'assets/icons/Icon.svg',
-                      fit: BoxFit.contain,
-                      color: CustomColor.grayColor,
+                  suffixIcon: GestureDetector(
+                    onTap: controller.pickImageFromGallery,
+                    child: Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: SvgPicture.asset(
+                        'assets/icons/Icon.svg',
+                        fit: BoxFit.contain,
+                        color: CustomColor.grayColor,
+                      ),
                     ),
                   ),
+
                   hintText: Strings.typeMessage,
                   hintStyle: TextStyle(
                     color: CustomColor.grayColor,
