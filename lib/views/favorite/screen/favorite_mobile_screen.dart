@@ -3,7 +3,6 @@ part of 'favorite_screen.dart';
 class FavoriteMobileScreen extends GetView<FavoriteController> {
   FavoriteMobileScreen({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,7 +49,34 @@ class FavoriteMobileScreen extends GetView<FavoriteController> {
             Sizes.height.v20,
             TextHeadingBar(),
             Sizes.height.v20,
-            AllFavouritesDefault()
+            AllFavouritesDefault(),
+            Column(
+              mainAxisAlignment: mainCenter,
+              children: [
+                TextWidget(Strings.youHaveNoFavoritesSavedOnThisList),
+                Sizes.height.v10,
+                TextWidget(
+                  fontSize: Dimensions.titleSmall,
+                  textAlign: TextAlign.center,
+                  Strings.useTheFavoriteIconToSaveAdsThatYouWantToCheckLatter,
+                  color: CustomColor.grayColor,
+                ),
+                Sizes.height.v40,
+
+                Container(
+                  padding: EdgeInsets.all(Dimensions.paddingSize * 0.4),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: CustomColor.grayColor),
+                    borderRadius: BorderRadius.circular(Dimensions.radius),
+                  ),
+                  child: TextWidget(
+                    Strings.continueSearching,
+                    fontSize: Dimensions.titleSmall,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),

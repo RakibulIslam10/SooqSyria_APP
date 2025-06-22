@@ -11,7 +11,7 @@ class NewOfferCard extends GetView<HomeController> {
         TextWidget(
           padding: EdgeInsets.only(bottom: Dimensions.verticalSize * 0.4),
           Strings.whatsNewOnsSoqSyria,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.bold,
         ),
         SizedBox(
           height: MediaQuery.of(context).size.width * 0.4,

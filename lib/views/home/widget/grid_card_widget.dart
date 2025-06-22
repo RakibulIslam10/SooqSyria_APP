@@ -74,7 +74,7 @@ class GridCardWidget extends GetView<HomeController> {
                   TextWidget(
                     maxLines: 2,
                     category['title'],
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.bold,
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: Dimensions.titleSmall * 0.8),
                   ),

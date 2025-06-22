@@ -13,7 +13,7 @@ class RecentSerchesCard extends StatelessWidget {
         TextWidget(
           padding: EdgeInsets.only(top: Dimensions.verticalSize * 0.4),
           Strings.recentSearch,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.bold,
         ),
         SizedBox(
           height: MediaQuery.of(context).size.width * 0.28,

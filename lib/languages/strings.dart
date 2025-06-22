@@ -129,7 +129,26 @@ class Strings {
   static const String viewALl = "View All";
   static const String youHaveNoFavoritesSavedOnThisList =
       "You have no favorites saved on this list";
+  static const String call = "Call";
+  static const String chat = "Chat";
+  static const String chatLIst = "Chat List";
+  static const String allMessage = "All Message";
+  static const String all = "All";
+  static const String buying = "Buying";
+  static const String selling = "Selling";
+  static const String unread = "Unread";
+  static const String postANAdd = "Post an Add";
+  static const String yourChatIsEmpty = "Your chat is empty!";
+  static const String postAnAdOrMessageASellerToStart = "post an ad or message a seller to start seing conversation here";
+  static const String areYouVerified = "Are You Verified?";
+  static const String getMoreVisibilityAndEnhanceYourCredibility = "Get more visibility and enhance your credibility";
+
   static const String useTheFavoriteIconToSaveAdsThatYouWantToCheckLatter =
-      "Use the favorite icon to save ads that you want to check latter";
+      "Use the favorite icon to save ads that you want to check latter.";
   static const String continueSearching = "Continue Searching";
+  static const String notification = "Notification";
+  static const String explore = "Explore Now";
+  static const String exploree = "Explore";
+  static const String noNotificationYet = "No notifications...yet!";
+  static const String noNotificationStayUpDateText = "Stay up-date- with the latest listings that match what youreyou’re looking for.";
 }

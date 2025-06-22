@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sooqyria/base/widgets/text_widget.dart';
-import '../../languages/strings.dart';
 import '../themes/token.dart';
 import '../utils/dimensions.dart';
 
@@ -11,6 +10,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   final List<Widget>? actions;
   final bool centerTitle;
   final Color? backgroundColor;
+  final Color? titleColor;
 
   const AppBarWidget({
     super.key,
@@ -18,7 +18,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
     this.onBack,
     this.actions,
     this.centerTitle = true,
-    this.backgroundColor,
+    this.backgroundColor, this.titleColor,
   });
 
   @override
@@ -48,8 +48,8 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
       ),
       title: TextWidget(
         title,
-        fontWeight: FontWeight.w500,
-        color: CustomColor.grayColor,
+        fontWeight: FontWeight.w600,
+        color: titleColor?? CustomColor.grayColor,
       ),
       actions: actions,
       centerTitle: centerTitle,

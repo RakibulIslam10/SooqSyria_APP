@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../themes/model.dart';
 import '../themes/token.dart';
@@ -53,24 +54,19 @@ class TextWidget extends StatelessWidget {
           padding: padding,
           child: Text(
             text.tr,
-            style: style != null
-                ? style!.copyWith(
+            style: (style ?? _style(typographyStyle)).copyWith(
               color: color ?? _color(colorShade),
               fontSize: fontSize,
               fontWeight: fontWeight,
-            )
-                : style ??
-                _style(typographyStyle).copyWith(
-                  color: color ?? _color(colorShade),
-                  fontSize: fontSize,
-                  fontWeight: fontWeight,
-                  fontFamily: 'Inter',
-                ),
+              fontFamily: GoogleFonts.poppins().fontFamily, // Google Font applied here
+            ),
             textAlign: textAlign,
             overflow: textOverflow,
             maxLines: maxLines,
             textScaler: TextScaler.linear(ScreenUtil().textScaleFactor),
           ),
+
+
         ),
       ),
     );

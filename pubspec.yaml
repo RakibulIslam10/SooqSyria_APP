@@ -36,6 +36,8 @@ dependencies:
   flutter_otp_text_field: ^1.5.1+1
   flutter_dash: ^1.0.0
   shimmer:
+  google_fonts: ^6.1.0
+
 
 
 dev_dependencies:
@@ -53,6 +55,7 @@ flutter:
 
   assets:
     - assets/icons/
+    - assets/icons/Double Check.svg
     - assets/icons/Vector.svg
     - assets/images/
     - assets/images/bag 1.png
@@ -63,9 +66,4 @@ flutter:
     - assets/images/service.png
     - assets/logo/
 
-fonts:
-  - family: Inter
-    fonts:
-      - asset: assets/fonts/Inter-Regular.ttf
-      - asset: assets/fonts/Inter-Bold.ttf
-        weight: 700
+

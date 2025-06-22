@@ -17,7 +17,7 @@ class PopularRealStateItems extends GetView<HomeController> {
                   vertical: Dimensions.verticalSize * 0.4,
                 ),
                 Strings.popularInRealState,
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.bold,
               ),
               SvgPicture.asset(Assets.icons.back),
             ],
@@ -50,7 +50,7 @@ class PopularRealStateItems extends GetView<HomeController> {
                         'AED 120.2120',
                         fontSize: Dimensions.titleSmall * 0.8,
                         color: CustomColor.primary,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.bold,
                       ),
                       TextWidget(
                         "BYD.HAN.Extend",

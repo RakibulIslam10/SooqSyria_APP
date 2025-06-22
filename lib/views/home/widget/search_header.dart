@@ -29,9 +29,12 @@ class SearchHeader extends GetView<HomeController> {
             ),
           ),
         ),
-        Container(
-          decoration: BoxDecoration(color: CustomColor.whiteColor),
-          child: SvgPicture.asset(Assets.icons.notification),
+        GestureDetector(
+          onTap: () => Get.toNamed(Routes.notificationScreen),
+          child: Container(
+            decoration: BoxDecoration(color: CustomColor.whiteColor),
+            child: SvgPicture.asset(Assets.icons.notification),
+          ),
         ),
       ],
     );

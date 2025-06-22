@@ -9,6 +9,7 @@ class CustomColor {
   static Color typography = HexColor('#1D1D1D');
   static Color disableColor = HexColor('#BCBCBC');
   static Color whiteShade = HexColor('#ECECEC');
+  static Color circleBorderColor = HexColor('#142356');
 
   //Dark Color
   static Color primaryDark = HexColor('#007bff');
@@ -24,9 +25,9 @@ class CustomColor {
   static Color canceled = HexColor('#FFFFFF');
   static Color selected = HexColor('#27B059');
   static Color rejected = HexColor('#DC3A3A');
+  static Color whiteShadeBlue = HexColor('#DFE7ED');
   static Color backgroundScaffoldColor = HexColor('#185F90');
   static Color whiteShadeColor = HexColor('#EEF0F7');
-
 
   static Color whiteColor = HexColor('#FFFFFF');
   static Color borderColor = HexColor('#484848');
@@ -35,19 +36,7 @@ class CustomColor {
   static const Color blackColor = Color(0xFF000000);
   static const Color primaryColorShadeZero = Color(0xFFFFF2F0);
 
-
-
-
-
-
   static Color grayColor = Colors.grey;
-
-
-
-
-
-
-
 
   // Shade Color
   static CSM typographyShade = CSM(typography.value, typographyShadeToken);
