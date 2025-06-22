@@ -3,6 +3,12 @@ part of '../routes/routes.dart';
 class RoutePageList {
   static var list = [
     GetPage(
+      name: Routes.chatScreen,
+      page: () => const ChatScreen(),
+      binding: ChatBinding(),
+    ),
+    
+    GetPage(
       name: Routes.notificationScreen,
       page: () => const NotificationScreen(),
       binding: NotificationBinding(),

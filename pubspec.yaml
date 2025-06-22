@@ -56,6 +56,7 @@ flutter:
   assets:
     - assets/icons/
     - assets/icons/Double Check.svg
+    - assets/icons/Icon.svg
     - assets/icons/Vector.svg
     - assets/images/
     - assets/images/bag 1.png

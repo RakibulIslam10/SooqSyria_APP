@@ -149,6 +149,7 @@ class Strings {
   static const String notification = "Notification";
   static const String explore = "Explore Now";
   static const String exploree = "Explore";
+  static const String typeMessage = "Type a message...";
   static const String noNotificationYet = "No notifications...yet!";
   static const String noNotificationStayUpDateText = "Stay up-date- with the latest listings that match what youreyou’re looking for.";
 }

@@ -30,6 +30,8 @@ class CustomColor {
   static Color whiteShadeColor = HexColor('#EEF0F7');
 
   static Color whiteColor = HexColor('#FFFFFF');
+  static Color activeColor = HexColor('#53E88B');
+  static Color sentColor = HexColor('#EAB1B1');
   static Color borderColor = HexColor('#484848');
 
   // Others

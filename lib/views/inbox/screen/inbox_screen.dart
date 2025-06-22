@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:sooqyria/base/widgets/app_bar_widget.dart';
+import 'package:sooqyria/routes/routes.dart';
 import '../../../base/utils/basic_import.dart';
 import '../controller/inbox_controller.dart';
 part 'inbox_tablet_screen.dart';
