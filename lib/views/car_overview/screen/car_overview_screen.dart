@@ -1,4 +1,6 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sooqyria/views/car_overview/widget/carousel_slider_widget.dart';
 import '../../../base/utils/basic_import.dart';
 import '../controller/car_overview_controller.dart';
