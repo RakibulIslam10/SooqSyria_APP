@@ -17,9 +17,6 @@ class AllFavouritesDefault extends GetView<FavoriteController> {
           childAspectRatio: 0.95,
         ),
         itemBuilder: (context, index) {
-          final item = controller.homeController.carInfoList[index];
-          final isFav = controller.isFavorite(item);
-
           if (index == 1) {
             return GestureDetector(
               onTap: () {
@@ -52,7 +49,11 @@ class AllFavouritesDefault extends GetView<FavoriteController> {
             );
           }
 
+          final item = controller.homeController.carInfoList[index];
+
           return Obx(() {
+            final isFav = controller.isFavorite(item);
+
             return Container(
               padding: EdgeInsets.all(6),
               decoration: BoxDecoration(

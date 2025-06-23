@@ -17,7 +17,7 @@ class CarouselSliderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Obx(
-      () => Column(
+          () => Column(
         children: [
           SizedBox(
             height: MediaQuery.sizeOf(context).height * 0.19,
@@ -33,31 +33,29 @@ class CarouselSliderWidget extends StatelessWidget {
                   controller.currentIndexBannerImage.value = index;
                 },
               ),
-              items: controller.sliderImageList
+              items: controller.car.image
                   .map(
                     (e) => Image.asset(
-                      e,
-                      fit: BoxFit.cover,
-                      width: MediaQuery.of(context).size.width * 0.8,
-                    ),
-                  )
+                  e,
+                  fit: BoxFit.cover,
+                  width: MediaQuery.of(context).size.width * 0.8,
+                ),
+              )
                   .toList(),
             ),
           ),
           Padding(
             padding: Dimensions.defaultHorizontalSize.edgeHorizontal,
             child: Row(
-              mainAxisAlignment: mainEnd,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 ...List.generate(
-                  controller.sliderImageList.length,
-                  (index) => AnimatedContainer(
+                  controller.car.image.length,
+                      (index) => AnimatedContainer(
                     duration: const Duration(milliseconds: 300),
                     margin: const EdgeInsets.symmetric(horizontal: 3),
                     height: 10,
-                    width: controller.currentIndexBannerImage.value == index
-                        ? 10
-                        : 10,
+                    width: 10,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: controller.currentIndexBannerImage.value == index
@@ -71,23 +69,29 @@ class CarouselSliderWidget extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () {
-
+                        controller.toggleFavorite(controller.car);
                       },
-                      child: Container(
-                        padding: EdgeInsets.all(Dimensions.paddingSize * 0.25),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          shape: BoxShape.circle,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.15),
-                              blurRadius: 6,
-                              offset: Offset(0, 3),
-                            ),
-                          ],
-                        ),
-                        child: Icon(Icons.bookmark_outline_outlined),
-                      ),
+                      child: Obx(() {
+                        final isFav = controller.isFavorite(controller.car);
+                        return Container(
+                          padding: EdgeInsets.all(Dimensions.paddingSize * 0.25),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            shape: BoxShape.circle,
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.15),
+                                blurRadius: 6,
+                                offset: Offset(0, 3),
+                              ),
+                            ],
+                          ),
+                          child: Icon(
+                            isFav ? Icons.bookmark : Icons.bookmark_outline_outlined,
+                            color: isFav ? Colors.red : Colors.grey,
+                          ),
+                        );
+                      }),
                     ),
                     Sizes.width.v10,
                     Container(
