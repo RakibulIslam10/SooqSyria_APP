@@ -10,8 +10,14 @@ class ChatBodyWidget extends GetView<ChatController> {
         return ListView.builder(
           controller: controller.scrollController,
           padding: EdgeInsets.symmetric(
-            horizontal: MediaQuery.of(context).size.width * 0.04,
-            vertical: MediaQuery.of(context).size.height * 0.02,
+            horizontal: MediaQuery
+                .of(context)
+                .size
+                .width * 0.04,
+            vertical: MediaQuery
+                .of(context)
+                .size
+                .height * 0.02,
           ),
           itemCount: controller.messageList.length,
           itemBuilder: (context, index) {
@@ -25,7 +31,10 @@ class ChatBodyWidget extends GetView<ChatController> {
                   children: [
                     ConstrainedBox(
                       constraints: BoxConstraints(
-                        maxWidth: MediaQuery.of(context).size.width * 0.7,
+                        maxWidth: MediaQuery
+                            .of(context)
+                            .size
+                            .width * 0.7,
                       ),
                       child: Container(
                         margin: EdgeInsets.symmetric(
@@ -45,20 +54,26 @@ class ChatBodyWidget extends GetView<ChatController> {
                         ),
                         child: message.imageUrl != null
                             ? ClipRRect(
-                                borderRadius: BorderRadius.circular(12),
-                                child: Image.file(
-                                  File(message.imageUrl!),
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.5,
-                                  fit: BoxFit.cover,
-                                ),
-                              )
+                          borderRadius: BorderRadius.circular(12),
+                          child: Image.file(
+                            File(message.imageUrl!),
+                            width:
+                            MediaQuery
+                                .of(context)
+                                .size
+                                .width * 0.5,
+                            fit: BoxFit.cover,
+                          ),
+                        )
                             : TextWidget(
-                                message.text ?? '',
-                                fontSize:
-                                    MediaQuery.of(context).size.width * 0.04,
-                                color: isMe ? Colors.white : Colors.black,
-                              ),
+                          message.text ?? '',
+                          fontSize:
+                          MediaQuery
+                              .of(context)
+                              .size
+                              .width * 0.04,
+                          color: isMe ? Colors.white : Colors.black,
+                        ),
                       ),
                     ),
                     Wrap(
@@ -124,7 +139,10 @@ class ChatBodyWidget extends GetView<ChatController> {
                           ),
                           ConstrainedBox(
                             constraints: BoxConstraints(
-                              maxWidth: MediaQuery.of(context).size.width * 0.7,
+                              maxWidth: MediaQuery
+                                  .of(context)
+                                  .size
+                                  .width * 0.7,
                             ),
                             child: Container(
                               margin: EdgeInsets.symmetric(
@@ -146,22 +164,28 @@ class ChatBodyWidget extends GetView<ChatController> {
                               ),
                               child: message.imageUrl != null
                                   ? ClipRRect(
-                                      borderRadius: BorderRadius.circular(12),
-                                      child: Image.file(
-                                        File(message.imageUrl!),
-                                        width:
-                                            MediaQuery.of(context).size.width *
-                                            0.5,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    )
+                                borderRadius: BorderRadius.circular(12),
+                                child: Image.file(
+                                  File(message.imageUrl!),
+                                  width:
+                                  MediaQuery
+                                      .of(context)
+                                      .size
+                                      .width *
+                                      0.5,
+                                  fit: BoxFit.cover,
+                                ),
+                              )
                                   : TextWidget(
-                                      message.text ?? '',
-                                      fontSize:
-                                          MediaQuery.of(context).size.width *
-                                          0.04,
-                                      color: isMe ? Colors.white : Colors.black,
-                                    ),
+                                message.text ?? '',
+                                fontSize:
+                                MediaQuery
+                                    .of(context)
+                                    .size
+                                    .width *
+                                    0.04,
+                                color: isMe ? Colors.white : Colors.black,
+                              ),
                             ),
                           ),
                           TextWidget(

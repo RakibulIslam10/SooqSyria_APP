@@ -1,82 +1,7 @@
 part of '../screen/favorite_screen.dart';
 
 class AllFavouritesDefault extends GetView<FavoriteController> {
-  AllFavouritesDefault({super.key});
-
-  final List<Map<String, dynamic>> itemList = [
-    {
-      "image": "assets/images/car.png",
-      "price": "AED 120.2120",
-      "name": "BYD.HAN.Extend",
-      "distance": "2015.15Km",
-    },
-    {
-      "image": "assets/images/car.png",
-      "price": "AED 110.1120",
-      "name": "Tesla Model Y",
-      "distance": "1005.15Km",
-    },
-    {
-      "image": "assets/images/car.png",
-      "price": "AED 100.1110",
-      "name": "BMW i8",
-      "distance": "500.15Km",
-    },
-    {
-      "image": "assets/images/car.png",
-      "price": "AED 100.1110",
-      "name": "BMW i8",
-      "distance": "500.15Km",
-    },
-    {
-      "image": "assets/images/car.png",
-      "price": "AED 100.1110",
-      "name": "BMW i8",
-      "distance": "500.15Km",
-    },
-    {
-      "image": "assets/images/car.png",
-      "price": "AED 100.1110",
-      "name": "BMW i8",
-      "distance": "500.15Km",
-    },
-    {
-      "image": "assets/images/car.png",
-      "price": "AED 100.1110",
-      "name": "BMW i8",
-      "distance": "500.15Km",
-    },
-    {
-      "image": "assets/images/car.png",
-      "price": "AED 100.1110",
-      "name": "BMW i8",
-      "distance": "500.15Km",
-    },
-    {
-      "image": "assets/images/car.png",
-      "price": "AED 100.1110",
-      "name": "BMW i8",
-      "distance": "500.15Km",
-    },
-    {
-      "image": "assets/images/car.png",
-      "price": "AED 100.1110",
-      "name": "BMW i8",
-      "distance": "500.15Km",
-    },
-    {
-      "image": "assets/images/car.png",
-      "price": "AED 100.1110",
-      "name": "BMW i8",
-      "distance": "500.15Km",
-    },
-    {
-      "image": "assets/images/car.png",
-      "price": "AED 100.1110",
-      "name": "BMW i8",
-      "distance": "500.15Km",
-    },
-  ];
+  const AllFavouritesDefault({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -92,6 +17,9 @@ class AllFavouritesDefault extends GetView<FavoriteController> {
           childAspectRatio: 0.95,
         ),
         itemBuilder: (context, index) {
+          final item = controller.homeController.carInfoList[index];
+          final isFav = controller.isFavorite(item);
+
           if (index == 1) {
             return GestureDetector(
               onTap: () {
@@ -124,34 +52,32 @@ class AllFavouritesDefault extends GetView<FavoriteController> {
             );
           }
 
-          final item = itemList[index];
-          return Container(
-            padding: EdgeInsets.all(6),
-            decoration: BoxDecoration(
-              color: CustomColor.whiteColor,
-              border: Border.all(color: CustomColor.primary.withOpacity(0.4)),
-              borderRadius: BorderRadius.circular(Dimensions.radius * 0.4),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Stack(
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(6),
-                      child: Image.asset(
-                        item['image'],
-                        width: double.infinity,
-                        height: 100,
-                        fit: BoxFit.cover,
+          return Obx(() {
+            return Container(
+              padding: EdgeInsets.all(6),
+              decoration: BoxDecoration(
+                color: CustomColor.whiteColor,
+                border: Border.all(color: CustomColor.primary.withOpacity(0.4)),
+                borderRadius: BorderRadius.circular(Dimensions.radius * 0.4),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Stack(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(6),
+                        child: Image.asset(
+                          item.image,
+                          width: double.infinity,
+                          height: 100,
+                          fit: BoxFit.cover,
+                        ),
                       ),
-                    ),
-                    Positioned(
-                      top: 0,
-                      right: 0,
-                      child: Obx(() {
-                        bool isFav = controller.isFavorite(item);
-                        return GestureDetector(
+                      Positioned(
+                        top: 0,
+                        right: 0,
+                        child: GestureDetector(
                           onTap: () {
                             controller.toggleFavorite(item);
                           },
@@ -162,29 +88,29 @@ class AllFavouritesDefault extends GetView<FavoriteController> {
                                 ? CustomColor.primary
                                 : CustomColor.blackColor.withAlpha(921),
                           ),
-                        );
-                      }),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 8),
-                TextWidget(
-                  item['price'],
-                  fontSize: Dimensions.titleSmall * 0.85,
-                  fontWeight: FontWeight.w600,
-                  color: CustomColor.primary,
-                ),
-                const SizedBox(height: 4),
-                TextWidget(item['name'], fontSize: Dimensions.titleSmall * 0.8),
-                const SizedBox(height: 4),
-                TextWidget(
-                  item['distance'],
-                  fontSize: Dimensions.titleSmall * 0.75,
-                  color: CustomColor.grayColor,
-                ),
-              ],
-            ),
-          );
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 8),
+                  TextWidget(
+                    item.price,
+                    fontSize: Dimensions.titleSmall * 0.85,
+                    fontWeight: FontWeight.w600,
+                    color: CustomColor.primary,
+                  ),
+                  const SizedBox(height: 4),
+                  TextWidget(item.title, fontSize: Dimensions.titleSmall * 0.8),
+                  const SizedBox(height: 4),
+                  TextWidget(
+                    item.distance,
+                    fontSize: Dimensions.titleSmall * 0.75,
+                    color: CustomColor.grayColor,
+                  ),
+                ],
+              ),
+            );
+          });
         },
       ),
     );

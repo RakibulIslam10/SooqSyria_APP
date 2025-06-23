@@ -13,6 +13,7 @@ class AssetsRes {
   static const String VECTOR = 'assets/icons/Vector.svg';
   static const String BAG_1 = 'assets/images/bag 1.png';
   static const String CAR = 'assets/images/car.png';
+  static const String CAR2 = 'assets/images/car2.png';
   static const String HOME_1 = 'assets/images/home 1.png';
   static const String JOB = 'assets/images/job.png';
   static const String PAWPRINT_1 = 'assets/images/pawprint 1.png';

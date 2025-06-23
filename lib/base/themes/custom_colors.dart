@@ -10,6 +10,8 @@ class CustomColor {
   static Color disableColor = HexColor('#BCBCBC');
   static Color whiteShade = HexColor('#ECECEC');
   static Color circleBorderColor = HexColor('#142356');
+  static const MaterialColor greyColor = Colors.grey;
+
 
   //Dark Color
   static Color primaryDark = HexColor('#007bff');

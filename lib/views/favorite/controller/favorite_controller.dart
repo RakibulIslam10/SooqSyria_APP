@@ -1,20 +1,21 @@
 import 'package:get/get.dart';
+import 'package:sooqyria/views/home/controller/home_controller.dart';
+import 'package:sooqyria/views/home/model/car_info_model.dart';
 
 class FavoriteController extends GetxController {
+  final homeController = Get.find<HomeController>();
 
+  final RxList allFavoriteCar = <CarInfoModel>[].obs;
 
-  var favoriteList = <Map<String, dynamic>>[].obs;
-
-  void toggleFavorite(Map<String, dynamic> item) {
+  void toggleFavorite(CarInfoModel item) {
     if (isFavorite(item)) {
-      favoriteList.removeWhere((i) => i['name'] == item['name']);
+      allFavoriteCar.remove(item);
     } else {
-      favoriteList.add(item);
+      allFavoriteCar.add(item);
     }
   }
 
-  bool isFavorite(Map<String, dynamic> item) {
-    return favoriteList.any((i) => i['name'] == item['name']);
+  bool isFavorite(CarInfoModel item) {
+    return allFavoriteCar.contains(item);
   }
-
 }
