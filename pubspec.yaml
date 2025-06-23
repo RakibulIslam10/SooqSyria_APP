@@ -37,6 +37,8 @@ dependencies:
   flutter_dash: ^1.0.0
   shimmer:
   google_fonts: ^6.1.0
+  flutter_share: ^2.0.0
+
 
 
 

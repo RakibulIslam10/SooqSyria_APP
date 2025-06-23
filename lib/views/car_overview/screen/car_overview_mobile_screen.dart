@@ -36,7 +36,26 @@ class CarOverviewMobileScreen extends GetView<CarOverviewController> {
 
   _bodyWidget(BuildContext context) {
     return SafeArea(
-      child: Column(children: [CarouselSliderWidget(controller: controller)]),
+      child: ListView(
+        children: [
+          CarouselSliderWidget(controller: controller),
+          SizedBox(height: 16),
+          Padding(
+            padding: Dimensions.defaultHorizontalSize.edgeHorizontal,
+            child: Column(
+              crossAxisAlignment: crossStart,
+              children: [
+                CarInfoHeadingText(),
+                Sizes.height.v20,
+                CarOverviewText(),
+                DescriptionWidget(),
+                SafetyFeaturesWidgets()
+
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -152,4 +152,34 @@ class Strings {
   static const String typeMessage = "Type a message...";
   static const String noNotificationYet = "No notifications...yet!";
   static const String noNotificationStayUpDateText = "Stay up-date- with the latest listings that match what youreyou’re looking for.";
+
+  static const String carOverview = "Car Overview";
+  static const String bodyType = "Body Type ";
+  static const String exteriorColor = "Exterior Color";
+  static const String doors = "Doors";
+  static const String interioColor = "Interior Color";
+  static const String informationAndTechnology = "Infotainment & Technology";
+  static const String seatingCapacity = "Seating Capacity";
+  static const String seeMore = "See more";
+  static const String description = "Description";
+  static const String readMore = "Read more";
+  static const String features = "Features";
+  static const String showLess = "Show less";
+  static const String driverAssistanceFeatures = "Driver Assistance Features";
+  static const String safetyFeatures = "Safety Features";
+  static const String exteriorFeatures = "Exterior Features";
+  static const String otherOption = "Other Options";
+  static const String fuelType = "Fuel Type";
+  static const String engineCapacity = "Engine Capacity(cc)";
+  static const String horsepower = "Horsepower";
+  static const String noOfCylinders = "No.of Cylinders";
+  static const String transmissionType = "Transmission Type";
+  static const String warranty = "Warranty";
+  static const String targetMarket = "Target market";
+  static const String year = "Year";
+  static const String kilimeters = "Kilimeters";
+  static const String regionalSpecs = "Regional Specs";
+  static const String sellerType = "Seller type ";
+  static const String steering = "Steering";
+
 }

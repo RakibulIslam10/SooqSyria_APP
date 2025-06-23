@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_share/flutter_share.dart';
 import 'package:get/get.dart';
 import 'package:sooqyria/views/favorite/controller/favorite_controller.dart';
 
@@ -7,7 +8,8 @@ import '../../home/controller/home_controller.dart';
 import '../../home/model/car_info_model.dart';
 
 class CarOverviewController extends GetxController {
-  final car = Get.arguments;
+  final CarInfoModel car = Get.arguments as CarInfoModel;
+  RxBool showMore = false.obs;
 
   final favController = Get.put(FavoriteController());
   final homeController = Get.find<HomeController>();
@@ -25,6 +27,14 @@ class CarOverviewController extends GetxController {
     'assets/images/car2.png',
     'assets/images/car2.png',
   ];
+
+  Future<void> shareContent() async {
+    await FlutterShare.share(
+      title: 'Check this out',
+      text: 'Here is some awesome content to share!',
+      // You can also add linkUrl or chooserTitle if you want
+    );
+  }
 
   void toggleFavorite(CarInfoModel item) {
     if (isFavorite(item)) {
