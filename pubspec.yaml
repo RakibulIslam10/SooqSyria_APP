@@ -37,7 +37,7 @@ dependencies:
   flutter_dash: ^1.0.0
   shimmer:
   google_fonts: ^6.1.0
-  flutter_share: ^2.0.0
+  share_plus: ^11.0.0
 
 
 
@@ -66,6 +66,7 @@ flutter:
     - assets/images/car2.png
     - assets/images/home 1.png
     - assets/images/job.png
+    - assets/images/map.png
     - assets/images/pawprint 1.png
     - assets/images/service.png
     - assets/logo/

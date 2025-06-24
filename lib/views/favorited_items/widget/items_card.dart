@@ -46,7 +46,11 @@ class ItemsCard extends GetView<FavoriteController> {
               itemBuilder: (context, index) {
                 final item = controller.allFavoriteCar[index];
                 return GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Get.toNamed(Routes.favorite_overviewScreen,
+                    arguments: item
+                    );
+                  },
                   child: Container(
                     padding: EdgeInsets.all(6),
                     decoration: BoxDecoration(

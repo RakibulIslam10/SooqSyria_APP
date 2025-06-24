@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../../base/utils/basic_import.dart';
 import '../../../base/widgets/app_bar_widget.dart';
+import '../../home/model/car_info_model.dart';
 import '../controller/favorite_overview_controller.dart';
 part 'favorite_overview_tablet_screen.dart';
 part 'favorite_overview_mobile_screen.dart';

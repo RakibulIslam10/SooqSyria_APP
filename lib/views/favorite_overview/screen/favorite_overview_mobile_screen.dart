@@ -1,7 +1,7 @@
 part of 'favorite_overview_screen.dart';
 
 class FavoriteOverviewMobileScreen extends GetView<FavoriteOverviewController> {
-  FavoriteOverviewMobileScreen({super.key});
+  const FavoriteOverviewMobileScreen({super.key});
 
 
   @override

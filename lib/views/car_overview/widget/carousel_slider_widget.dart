@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 import '../controller/car_overview_controller.dart';
 
 import '../../../base/utils/basic_import.dart';
@@ -87,7 +88,11 @@ class CarouselSliderWidget extends StatelessWidget {
                     Sizes.width.v10,
                     GestureDetector(
                       onTap: () {
-                        controller.shareContent();
+                        SharePlus.instance.share(
+                          ShareParams(
+                            text: Strings.shareThisProductWithFriends,
+                          ),
+                        );
                       },
                       child: Container(
                         padding: EdgeInsets.all(Dimensions.paddingSize * 0.25),

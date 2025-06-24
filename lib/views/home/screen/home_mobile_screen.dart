@@ -10,25 +10,29 @@ class HomeMobileScreen extends GetView<HomeController> {
 
   _bodyWidget(BuildContext context) {
     return SafeArea(
-      child: Padding(
-        padding: Dimensions.defaultHorizontalSize.edgeHorizontal,
-        child: ListView(
-          children: [
-            SearchHeader(),
-            CarouselSliderWidget(controller: controller),
-            Sizes.height.v20,
-            GridCardWidget(),
-            Sizes.height.v10,
-            NewOfferCard(),
-            RecentSerchesCard(),
-            RecommendedListing(),
-            PopularCarItems(),
-            PopularRealStateItems(),
-            PopularProduct(),
-            KeepLookingItems(),
-            Sizes.height.v30,
-          ],
-        ),
+      child: CustomScrollView(
+        slivers: [
+          SliverPadding(
+            padding: Dimensions.defaultHorizontalSize.edgeHorizontal,
+            sliver: SliverList(
+              delegate: SliverChildListDelegate([
+                SearchHeader(),
+                CarouselSliderWidget(controller: controller),
+                Sizes.height.v20,
+                GridCardWidget(),
+                Sizes.height.v10,
+                NewOfferCard(),
+                RecentSerchesCard(),
+                RecommendedListing(),
+                PopularCarItems(),
+                PopularRealStateItems(),
+                PopularProduct(),
+                KeepLookingItems(),
+                Sizes.height.v30,
+              ]),
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -127,6 +127,7 @@ class Strings {
   static const String allFavourites = "All Favourites";
   static const String Default = "Default";
   static const String viewALl = "View All";
+  static const String visitTheSellerProfile = "Visit the seller’s profile";
   static const String youHaveNoFavoritesSavedOnThisList =
       "You have no favorites saved on this list";
   static const String call = "Call";
@@ -177,9 +178,12 @@ class Strings {
   static const String warranty = "Warranty";
   static const String targetMarket = "Target market";
   static const String year = "Year";
+  static const String shareThisProductWithFriends = "Share This Product With friends!";
   static const String kilimeters = "Kilimeters";
   static const String regionalSpecs = "Regional Specs";
   static const String sellerType = "Seller type ";
   static const String steering = "Steering";
+  static const String location = "location";
+  static const String smillerCar = "Smiller Car";
 
 }

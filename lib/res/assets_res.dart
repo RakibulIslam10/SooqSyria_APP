@@ -16,6 +16,7 @@ class AssetsRes {
   static const String CAR2 = 'assets/images/car2.png';
   static const String HOME_1 = 'assets/images/home 1.png';
   static const String JOB = 'assets/images/job.png';
+  static const String MAP = 'assets/images/map.png';
   static const String PAWPRINT_1 = 'assets/images/pawprint 1.png';
   static const String SERVICE = 'assets/images/service.png';
 }
