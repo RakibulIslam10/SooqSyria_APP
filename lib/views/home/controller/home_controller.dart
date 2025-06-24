@@ -11,7 +11,6 @@ class HomeController extends GetxController {
   var currentIndexBannerImage = 0.obs;
   var selectedIndex = 0.obs;
 
-
   PageController pageController = PageController();
   final RxList<String> sliderImageList = <String>[
     'assets/logo/image.png',
@@ -38,21 +37,24 @@ class HomeController extends GetxController {
       title: "BYD HAN Extend",
       distance: "2015 Km",
     ),
+    CarInfoModel(
+      image: "assets/images/car2.png",
+      price: "AED 120,000",
+      title: "BYD HAN Extend",
+      distance: "2015 Km",
+    ),
+    CarInfoModel(
+      image: "assets/images/car2.png",
+      price: "AED 120,000",
+      title: "BYD HAN Extend",
+      distance: "2015 Km",
+    ),
   ];
 
   final List<CategoryModel> categories = [
-    CategoryModel(
-      title: Strings.vehicles,
-      image: 'assets/images/Vehicles.png',
-    ),
-    CategoryModel(
-      title: Strings.realEState,
-      image: 'assets/images/home 1.png',
-    ),
-    CategoryModel(
-      title: Strings.jobOffers,
-      image: 'assets/images/job.png',
-    ),
+    CategoryModel(title: Strings.vehicles, image: 'assets/images/Vehicles.png'),
+    CategoryModel(title: Strings.realEState, image: 'assets/images/home 1.png'),
+    CategoryModel(title: Strings.jobOffers, image: 'assets/images/job.png'),
     CategoryModel(
       title: Strings.newAndUsedProduct,
       image: 'assets/images/bag 1.png',
@@ -66,8 +68,6 @@ class HomeController extends GetxController {
       image: 'assets/images/pawprint 1.png',
     ),
   ];
-
-
 
   void onImageSelected(int index) {
     selectedIndex.value = index;
