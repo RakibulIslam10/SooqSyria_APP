@@ -2,6 +2,13 @@ part of '../routes/routes.dart';
 
 class RoutePageList {
   static var list = [
+    
+    GetPage(
+      name: Routes.seller_profileScreen,
+      page: () => const SellerProfileScreen(),
+      binding: SellerProfileBinding(),
+    ),
+    
     GetPage(
       name: Routes.car_overviewScreen,
       page: () => const CarOverviewScreen(),

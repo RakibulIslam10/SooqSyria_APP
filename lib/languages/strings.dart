@@ -185,5 +185,17 @@ class Strings {
   static const String steering = "Steering";
   static const String location = "location";
   static const String smillerCar = "Smiller Car";
+  static const String accountDetails = "account Details";
+  static const String allListing = "All Listings";
+  static const String getVerified = "Get Verified";
+  static const String myAds = "My Ads";
+  static const String mySearches = "My Searches";
+  static const String accountSetting = "Account Settings";
+  static const String languageCurrrency = "Languaage & Currency";
+  static const String support = "Support";
+  static const String callUs = "Call Us";
+  static const String policies = "Policies";
+  static const String logOut = "Logout";
+  static const String profile = "Profile";
 
 }

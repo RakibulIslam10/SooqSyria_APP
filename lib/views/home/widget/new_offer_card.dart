@@ -24,7 +24,7 @@ class NewOfferCard extends GetView<HomeController> {
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: NetworkImage(
-                    'https://executiveeducation.wharton.upenn.edu/wp-content/uploads/2020/08/2009-commercial-real-estate-600.jpg',
+                    'https://www.asseticltd.com/images/top-real-estate-companies-bangladesh.webp',
                   ),
                   fit: BoxFit.cover,
                 ),

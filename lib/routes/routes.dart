@@ -27,6 +27,7 @@ import '../bindings/onboard_binding.dart';
 import '../bindings/real_state_binding.dart';
 import '../bindings/register_binding.dart';
 import '../bindings/reset_password_otp_binding.dart';
+import '../bindings/seller_profile_binding.dart';
 import '../bindings/services_binding.dart';
 import '../bindings/set_password_binding.dart';
 import '../bindings/splash_binding.dart';
@@ -47,6 +48,7 @@ import '../views/new_and_used_product/screen/new_and_used_product_screen.dart';
 import '../views/notification/screen/notification_screen.dart';
 import '../views/onboard/screen/onboard_screen.dart';
 import '../views/real_state/screen/real_state_screen.dart';
+import '../views/seller_profile/screen/seller_profile_screen.dart';
 import '../views/services/screen/services_screen.dart';
 import '../views/set_password/screen/set_password_screen.dart';
 import '../views/splash/screen/splash_screen.dart';
@@ -85,4 +87,6 @@ class Routes {
   static const String notificationScreen = '/notificationScreen';
   static const String chatScreen = '/chatScreen';
   static const String car_overviewScreen = '/car_overviewScreen';
+  static const String seller_profileScreen = '/seller_profileScreen';
+  static const String menuScreen = '/menuScreen';
 }

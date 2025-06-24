@@ -1,7 +1,10 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:shimmer/shimmer.dart';
+import 'package:sooqyria/routes/routes.dart';
 import 'package:sooqyria/views/car_overview/widget/carousel_slider_widget.dart';
 import '../../../assets/assets.dart';
 import '../../../base/utils/basic_import.dart';
