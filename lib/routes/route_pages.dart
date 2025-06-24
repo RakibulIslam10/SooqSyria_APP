@@ -2,6 +2,37 @@ part of '../routes/routes.dart';
 
 class RoutePageList {
   static var list = [
+    GetPage(
+      name: Routes.housing_overviewScreen,
+      page: () => const HousingOverviewScreen(),
+      binding: HousingOverviewBinding(),
+    ),
+    
+    GetPage(
+      name: Routes.real_state_housingScreen,
+      page: () => const RealStateHousingScreen(),
+      binding: RealStateHousingBinding(),
+    ),
+    
+    GetPage(
+      name: Routes.sub_categoryScreen,
+      transition: Transition.rightToLeft,
+      page: () => const SubCategoryScreen(),
+      binding: SubCategoryBinding(),
+    ),
+    
+    GetPage(
+      name: Routes.car_sub_categoryScreen,
+      page: () => const CarSubCategoryScreen(),
+      binding: CarSubCategoryBinding(),
+    ),
+    
+    GetPage(
+      name: Routes.categories_detailsScreen,
+      page: () => const CategoriesDetailsScreen(),
+      binding: CategoriesDetailsBinding(),
+    ),
+    
     
     GetPage(
       name: Routes.seller_profileScreen,
@@ -57,23 +88,7 @@ class RoutePageList {
       binding: NewAndUsedProductBinding(),
     ),
 
-    GetPage(
-      name: Routes.job_offersScreen,
-      page: () => const JobOffersScreen(),
-      binding: JobOffersBinding(),
-    ),
 
-    GetPage(
-      name: Routes.real_stateScreen,
-      page: () => const RealStateScreen(),
-      binding: RealStateBinding(),
-    ),
-
-    GetPage(
-      name: Routes.vehiclesScreen,
-      page: () => const VehiclesScreen(),
-      binding: VehiclesBinding(),
-    ),
 
     GetPage(
       name: Routes.favoriteScreen,

@@ -2,12 +2,16 @@ import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
+import '../../../languages/strings.dart';
 import '../model/car_info_model.dart';
+import '../model/categories_model.dart';
 
 class HomeController extends GetxController {
   final carouselController = CarouselSliderController();
   var currentIndexBannerImage = 0.obs;
   var selectedIndex = 0.obs;
+
+
   PageController pageController = PageController();
   final RxList<String> sliderImageList = <String>[
     'assets/logo/image.png',
@@ -36,6 +40,32 @@ class HomeController extends GetxController {
     ),
   ];
 
+  final List<CategoryModel> categories = [
+    CategoryModel(
+      title: Strings.vehicles,
+      image: 'assets/images/Vehicles.png',
+    ),
+    CategoryModel(
+      title: Strings.realEState,
+      image: 'assets/images/home 1.png',
+    ),
+    CategoryModel(
+      title: Strings.jobOffers,
+      image: 'assets/images/job.png',
+    ),
+    CategoryModel(
+      title: Strings.newAndUsedProduct,
+      image: 'assets/images/bag 1.png',
+    ),
+    CategoryModel(
+      title: Strings.animals,
+      image: 'assets/images/pawprint 1.png',
+    ),
+    CategoryModel(
+      title: Strings.services,
+      image: 'assets/images/pawprint 1.png',
+    ),
+  ];
 
 
 

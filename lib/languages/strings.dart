@@ -197,5 +197,6 @@ class Strings {
   static const String policies = "Policies";
   static const String logOut = "Logout";
   static const String profile = "Profile";
+  static const String allIn = "All in";
 
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sooqyria/base/widgets/app_bar_widget.dart';
 import '../../../base/utils/basic_import.dart';
 import '../controller/services_controller.dart';
 part 'services_tablet_screen.dart';

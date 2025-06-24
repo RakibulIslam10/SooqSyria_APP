@@ -1,5 +1,6 @@
 
 import 'package:get/get_navigation/src/routes/get_route.dart';
+import 'package:get/get_navigation/src/routes/transitions_type.dart';
 import 'package:sooqyria/bindings/otp_binding.dart';
 import 'package:sooqyria/bindings/register_second_binding.dart';
 import 'package:sooqyria/bindings/reset_password_binding.dart';
@@ -12,48 +13,51 @@ import 'package:sooqyria/views/auth/reset_password_otp_screen/screen/reset_passw
 import '../bindings/Menus_binding.dart';
 import '../bindings/animals_binding.dart';
 import '../bindings/car_overview_binding.dart';
+import '../bindings/car_sub_category_binding.dart';
+import '../bindings/categories_details_binding.dart';
 import '../bindings/chat_binding.dart';
 import '../bindings/favorite_binding.dart';
 import '../bindings/favorite_overview_binding.dart';
 import '../bindings/favorited_items_binding.dart';
 import '../bindings/home_binding.dart';
+import '../bindings/housing_overview_binding.dart';
 import '../bindings/inbox_binding.dart';
-import '../bindings/job_offers_binding.dart';
 import '../bindings/login_binding.dart';
 import '../bindings/navigation_binding.dart';
 import '../bindings/new_and_used_product_binding.dart';
 import '../bindings/notification_binding.dart';
 import '../bindings/onboard_binding.dart';
-import '../bindings/real_state_binding.dart';
+import '../bindings/real_state_housing_binding.dart';
 import '../bindings/register_binding.dart';
 import '../bindings/reset_password_otp_binding.dart';
 import '../bindings/seller_profile_binding.dart';
 import '../bindings/services_binding.dart';
 import '../bindings/set_password_binding.dart';
 import '../bindings/splash_binding.dart';
-import '../bindings/vehicles_binding.dart';
+import '../bindings/sub_category_binding.dart';
 import '../views/Menus/screen/Menus_screen.dart';
 import '../views/animals/screen/animals_screen.dart';
 import '../views/auth/login/screen/login_screen.dart';
 import '../views/car_overview/screen/car_overview_screen.dart';
+import '../views/car_sub_category/screen/car_sub_category_screen.dart';
+import '../views/categories_details/screen/categories_details_screen.dart';
 import '../views/chat/screen/chat_screen.dart';
 import '../views/favorite/screen/favorite_screen.dart';
 import '../views/favorite_overview/screen/favorite_overview_screen.dart';
 import '../views/favorited_items/screen/favorited_items_screen.dart';
 import '../views/home/screen/home_screen.dart';
+import '../views/housing_overview/screen/housing_overview_screen.dart';
 import '../views/inbox/screen/inbox_screen.dart';
-import '../views/job_offers/screen/job_offers_screen.dart';
 import '../views/navigation/screen/navigation_screen.dart';
 import '../views/new_and_used_product/screen/new_and_used_product_screen.dart';
 import '../views/notification/screen/notification_screen.dart';
 import '../views/onboard/screen/onboard_screen.dart';
-import '../views/real_state/screen/real_state_screen.dart';
+import '../views/real_state_housing/screen/real_state_housing_screen.dart';
 import '../views/seller_profile/screen/seller_profile_screen.dart';
 import '../views/services/screen/services_screen.dart';
 import '../views/set_password/screen/set_password_screen.dart';
 import '../views/splash/screen/splash_screen.dart';
-import '../views/vehicles/screen/vehicles_screen.dart';
-
+import '../views/sub_category/screen/sub_category_screen.dart';
 part '../routes/route_pages.dart';
 
 class Routes {
@@ -76,7 +80,6 @@ class Routes {
   static const String inboxScreen = '/inboxScreen';
   static const String MenusScreen = '/MenusScreen';
   static const String favoriteScreen = '/favoriteScreen';
-  static const String vehiclesScreen = '/vehiclesScreen';
   static const String real_stateScreen = '/real_stateScreen';
   static const String job_offersScreen = '/job_offersScreen';
   static const String new_and_used_productScreen = '/new_and_used_productScreen';
@@ -89,4 +92,9 @@ class Routes {
   static const String car_overviewScreen = '/car_overviewScreen';
   static const String seller_profileScreen = '/seller_profileScreen';
   static const String menuScreen = '/menuScreen';
+  static const String categories_detailsScreen = '/categories_detailsScreen';
+  static const String car_sub_categoryScreen = '/car_sub_categoryScreen';
+  static const String sub_categoryScreen = '/sub_categoryScreen';
+  static const String real_state_housingScreen = '/real_state_housingScreen';
+  static const String housing_overviewScreen = '/housing_overviewScreen';
 }

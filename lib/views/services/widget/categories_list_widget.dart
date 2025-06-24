@@ -11,6 +11,22 @@ class CategoriesListWidget extends GetView<ServicesController> {
     Strings.healthANdBeauty ,
     Strings.eventsAndOrganization,
     Strings.translationAndPrivate,
+    Strings.translationAndPrivate,
+    Strings.translationAndPrivate,
+    Strings.translationAndPrivate,
+    Strings.translationAndPrivate,
+    Strings.translationAndPrivate,
+    Strings.translationAndPrivate,
+    Strings.translationAndPrivate,
+    Strings.translationAndPrivate,
+    Strings.translationAndPrivate,
+    Strings.translationAndPrivate,
+    Strings.translationAndPrivate,
+    Strings.translationAndPrivate,
+    Strings.translationAndPrivate,
+    Strings.translationAndPrivate,
+    Strings.translationAndPrivate,
+    Strings.translationAndPrivate,
   ];
 
   @override
@@ -24,7 +40,6 @@ class CategoriesListWidget extends GetView<ServicesController> {
                 (index) => Column(
               crossAxisAlignment: crossStart,
               children: [
-
                 TextWidget(
                   categoriesList[index],
                   padding: EdgeInsetsGeometry.all(Dimensions.verticalSize * 0.2),
