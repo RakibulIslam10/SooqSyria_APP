@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sooqyria/routes/routes.dart';
 import '../../../base/utils/basic_import.dart';
 import '../controller/navigation_controller.dart';
 import '../widget/navigation_bar_widget.dart';

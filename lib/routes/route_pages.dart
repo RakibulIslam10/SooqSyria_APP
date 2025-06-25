@@ -3,79 +3,111 @@ part of '../routes/routes.dart';
 class RoutePageList {
   static var list = [
     GetPage(
+      name: Routes.add_place_fromScreen,
+      page: () => const AddPlaceFromScreen(),
+      binding: AddPlaceFromBinding(),
+    ),
+    
+    GetPage(
+      name: Routes.add_category_typeScreen,
+      page: () => const AddCategoryTypeScreen(),
+      binding: AddCategoryTypeBinding(),
+    ),
+    
+    GetPage(
+      name: Routes.selection_categoryScreen,
+      page: () => const SelectionCategoryScreen(),
+      binding: SelectionCategoryBinding(),
+    ),
+    
+    GetPage(
+      name: Routes.select_cityScreen,
+      page: () => const SelectCityScreen(),
+      binding: SelectCityBinding(),
+    ),
+    
+    
+    GetPage(
+      transition: Transition.rightToLeft,
+      name: Routes.car_categoriesScreen,
+      page: () => const CarCategoriesScreen(),
+      binding: CarCategoriesBinding(),
+    ),
+
+    GetPage(
       name: Routes.all_car_listScreen,
       page: () => const AllCarListScreen(),
       binding: AllCarListBinding(),
     ),
-    
+
     GetPage(
       name: Routes.housing_overviewScreen,
       page: () => const HousingOverviewScreen(),
       binding: HousingOverviewBinding(),
     ),
-    
+
     GetPage(
       name: Routes.real_state_housingScreen,
       page: () => const RealStateHousingScreen(),
       binding: RealStateHousingBinding(),
     ),
-    
+
     GetPage(
       name: Routes.sub_categoryScreen,
       transition: Transition.rightToLeft,
       page: () => const SubCategoryScreen(),
       binding: SubCategoryBinding(),
     ),
-    
+
     GetPage(
+      transition: Transition.rightToLeft,
       name: Routes.car_sub_categoryScreen,
       page: () => const CarSubCategoryScreen(),
       binding: CarSubCategoryBinding(),
     ),
-    
+
     GetPage(
       name: Routes.categories_detailsScreen,
       page: () => const CategoriesDetailsScreen(),
       binding: CategoriesDetailsBinding(),
     ),
-    
-    
+
     GetPage(
       name: Routes.seller_profileScreen,
       page: () => const SellerProfileScreen(),
       binding: SellerProfileBinding(),
     ),
-    
+
     GetPage(
       name: Routes.car_overviewScreen,
       page: () => const CarOverviewScreen(),
       binding: CarOverviewBinding(),
     ),
-    
+
     GetPage(
       name: Routes.chatScreen,
       page: () => const ChatScreen(),
       binding: ChatBinding(),
     ),
-    
+
     GetPage(
       name: Routes.notificationScreen,
       page: () => const NotificationScreen(),
       binding: NotificationBinding(),
     ),
-    
+
     GetPage(
       name: Routes.favorite_overviewScreen,
       page: () => const FavoriteOverviewScreen(),
       binding: FavoriteOverviewBinding(),
     ),
-    
+
     GetPage(
       name: Routes.favorited_itemsScreen,
       page: () => const FavoritedItemsScreen(),
       binding: FavoritedItemsBinding(),
     ),
-    
+
     GetPage(
       name: Routes.servicesScreen,
       page: () => const ServicesScreen(),
@@ -93,8 +125,6 @@ class RoutePageList {
       page: () => const NewAndUsedProductScreen(),
       binding: NewAndUsedProductBinding(),
     ),
-
-
 
     GetPage(
       name: Routes.favoriteScreen,

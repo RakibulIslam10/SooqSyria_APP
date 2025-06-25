@@ -9,9 +9,9 @@ class SearchHeader extends GetView<HomeController> {
       children: [
         Expanded(
           child: Container(
-            margin: EdgeInsets.only(right: Dimensions.widthSize * 1.5),
-            height: Dimensions.inputBoxHeight * 0.69,
-            padding: EdgeInsets.symmetric(horizontal: 16),
+            margin: EdgeInsets.only(right: Dimensions.widthSize * 1.2),
+            height: Dimensions.inputBoxHeight * 0.68,
+            padding: EdgeInsets.symmetric(horizontal: 15),
             decoration: BoxDecoration(
               color: CustomColor.whiteShadeColor,
               borderRadius: BorderRadius.circular(Dimensions.radius * 3),

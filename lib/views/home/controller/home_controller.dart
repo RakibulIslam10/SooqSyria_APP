@@ -65,7 +65,7 @@ class HomeController extends GetxController {
     ),
     CategoryModel(
       title: Strings.services,
-      image: 'assets/images/pawprint 1.png',
+      image: 'assets/images/service.png',
     ),
   ];
 

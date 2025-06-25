@@ -10,7 +10,9 @@ class NavigationMobileScreen extends GetView<NavigationController> {
       body: Obx(() => controller.bodyPages[controller.selectedIndex.value]),
       bottomNavigationBar:  NavigationBarWidget(),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Get.toNamed(Routes.select_cityScreen);
+        },
         backgroundColor: CustomColor.primary,
         elevation: 6,
         shape: const CircleBorder(),

@@ -6,10 +6,12 @@ class InboxMobileScreen extends GetView<InboxController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      appBar: AppBarWidget(
-        title: Strings.chatLIst,
-        titleColor: CustomColor.blackColor,
+      appBar: CustomAppBar(
+        Strings.chatLIst,
+        autoLeading: false,
+        centerTitle: true,
+        backgroundColor: CustomColor.whiteColor,
+        showBackButton: false,
       ),
       body: _bodyWidget(context),
     );
@@ -20,19 +22,19 @@ class InboxMobileScreen extends GetView<InboxController> {
       child: controller.allMessageList.isNotEmpty
           ? EmptyChatListWidget()
           : Column(
-        crossAxisAlignment: crossStart,
-            children: [
-              TextWidget(
-                padding: EdgeInsetsGeometry.symmetric(
-                  vertical: Dimensions.verticalSize  * 0.6,
-                  horizontal: Dimensions.defaultHorizontalSize
+              crossAxisAlignment: crossStart,
+              children: [
+                TextWidget(
+                  padding: EdgeInsetsGeometry.symmetric(
+                    vertical: Dimensions.verticalSize * 0.6,
+                    horizontal: Dimensions.defaultHorizontalSize,
+                  ),
+                  Strings.allMessage,
+                  fontWeight: FontWeight.bold,
                 ),
-                Strings.allMessage,
-                fontWeight: FontWeight.bold,
-              ),
-              Expanded(child: AllMessageListWidget()),
-            ],
-          )
+                Expanded(child: AllMessageListWidget()),
+              ],
+            ),
     );
   }
 }

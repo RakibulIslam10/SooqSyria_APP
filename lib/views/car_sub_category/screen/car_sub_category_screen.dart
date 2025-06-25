@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sooqyria/routes/routes.dart';
 import '../../../base/utils/basic_import.dart';
 import '../controller/car_sub_category_controller.dart';
 part 'car_sub_category_tablet_screen.dart';

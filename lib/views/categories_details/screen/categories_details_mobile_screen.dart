@@ -55,7 +55,7 @@ class CategoriesDetailsMobileScreen
                               )) {
                                 Get.toNamed(Routes.new_and_used_productScreen);
                               } else if (title.contains(Strings.animals)) {
-                                Get.toNamed(Routes.animalsScreen);
+                                return;
                               } else {
                                 Get.snackbar(
                                   'Notice',
@@ -82,10 +82,17 @@ class CategoriesDetailsMobileScreen
                     children: [
                       TextWidget(
                         onTap: () {
-                          Get.toNamed(
-                            Routes.sub_categoryScreen,
-                            arguments: categoriesList[index],
-                          );
+                          if (categoriesList[index].contains(Strings.cars)) {
+                            Get.toNamed(
+                              Routes.car_categoriesScreen,
+                              arguments: categoriesList[index],
+                            );
+                          } else {
+                            Get.toNamed(
+                              Routes.sub_categoryScreen,
+                              arguments: categoriesList[index],
+                            );
+                          }
                         },
                         categoriesList[index],
                         padding: EdgeInsetsGeometry.all(

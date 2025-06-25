@@ -20,7 +20,7 @@ class ResponsiveLayout extends StatelessWidget {
         if (constraints.maxWidth < Dimensions.mobileScreenWidth) {
           return mobile;
         } else if (constraints.maxWidth < Dimensions.tabletScreenWidth) {
-          // return tablet ?? mobile; =>>  use this for tablet
+          // return tablet ?? mobile;
           return mobile;
         } else {
           return desktop ?? mobile;

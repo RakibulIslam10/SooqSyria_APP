@@ -1,34 +1,15 @@
 part of 'favorite_screen.dart';
 
 class FavoriteMobileScreen extends GetView<FavoriteController> {
-  FavoriteMobileScreen({super.key});
+  const FavoriteMobileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         scrolledUnderElevation: 0,
         backgroundColor: CustomColor.whiteColor,
-        leading: InkWell(
-          hoverColor: Colors.transparent,
-          splashColor: Colors.transparent,
-          highlightColor: Colors.transparent,
-          onTap: () => Get.back(),
-          child: Container(
-            margin: EdgeInsets.all(Dimensions.paddingSize * 0.25),
-            decoration: BoxDecoration(
-              color: CustomColor.primary,
-              shape: BoxShape.circle,
-            ),
-            child: Center(
-              child: Icon(
-                Icons.arrow_back_ios_new,
-                size: Dimensions.iconSizeLarge * 0.65,
-                color: CustomColor.whiteColor,
-              ),
-            ),
-          ),
-        ),
         title: TextWidget(
           Strings.favorite,
           fontWeight: FontWeight.w500,

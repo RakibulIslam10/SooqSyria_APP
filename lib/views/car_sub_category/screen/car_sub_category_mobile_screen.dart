@@ -1,20 +1,109 @@
 part of 'car_sub_category_screen.dart';
 
 class CarSubCategoryMobileScreen extends GetView<CarSubCategoryController> {
-  const CarSubCategoryMobileScreen({super.key});
+  CarSubCategoryMobileScreen({super.key});
+
+  final List<String> categoriesList = [
+    "124 Spider",
+    "500",
+    "Alfa Romeo",
+    "590",
+    "600",
+    "400",
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar('CarSubCategory Mobile Screen'),
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: CustomColor.whiteColor,
+        leading: InkWell(
+          hoverColor: Colors.transparent,
+          splashColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+          onTap: () => Get.back(),
+          child: Container(
+            margin: EdgeInsets.all(Dimensions.paddingSize * 0.25),
+            decoration: BoxDecoration(
+              color: CustomColor.primary,
+              shape: BoxShape.circle,
+            ),
+            child: Center(
+              child: Icon(
+                Icons.arrow_back_ios_new,
+                size: Dimensions.iconSizeLarge * 0.65,
+                color: CustomColor.whiteColor,
+              ),
+            ),
+          ),
+        ),
+        title: Column(
+          children: [
+            TextWidget(
+              padding: EdgeInsetsGeometry.only(
+                bottom: Dimensions.verticalSize * 0.2,
+              ),
+              controller.selectedCar,
+              fontWeight: FontWeight.w600,
+              color: CustomColor.blackColor,
+            ),
+            TextWidget(
+              Strings.model,
+              fontSize: Dimensions.titleSmall,
+              fontWeight: FontWeight.w600,
+              color: CustomColor.grayColor,
+            ),
+          ],
+        ),
+      ),
       body: _bodyWidget(context),
     );
   }
 
   _bodyWidget(BuildContext context) {
-    return const SafeArea(
-      child: Column(
-        children: [],
+    return SafeArea(
+      child: Padding(
+        padding: Dimensions.defaultHorizontalSize.edgeHorizontal,
+        child: Column(
+          crossAxisAlignment: crossStart,
+          children: [
+            Sizes.height.v10,
+            Column(
+              crossAxisAlignment: crossStart,
+              children: [
+                Divider(color: Colors.white),
+                TextWidget(
+                  padding: EdgeInsetsGeometry.only(
+                    bottom: Dimensions.verticalSize * 0.2,
+                  ),
+                  "${Strings.allIn} ${controller.selectedCar}",
+                  color: CustomColor.primary,
+                  fontWeight: FontWeight.bold,
+                ),
+                Divider(),
+              ],
+            ),
+
+            ...List.generate(
+              categoriesList.length,
+              (index) => Column(
+                crossAxisAlignment: crossStart,
+                children: [
+                  TextWidget(
+                    onTap: () {
+                    },
+                    categoriesList[index],
+                    padding: EdgeInsetsGeometry.all(
+                      Dimensions.verticalSize * 0.2,
+                    ),
+                  ),
+                  Divider(),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

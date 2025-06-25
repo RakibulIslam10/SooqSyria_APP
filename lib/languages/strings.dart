@@ -198,5 +198,28 @@ class Strings {
   static const String logOut = "Logout";
   static const String profile = "Profile";
   static const String allIn = "All in";
+  static const String model = "Model";
+  static const String placeAnAdd = "Place an ad";
+  static const String tellUsAboutYourHousing = "Tell us about your Housing";
+  static const String whereShouldWePlaceYourAdd = "Where should we place your add?";
+  static const String selectCity = "Select a City";
+  static const String listingType = "Listing Type";
+  static const String aleppo = "Aleppo";
+  static const String neighborhoodDristic = "Neighborhood / District*";
+  static const String propertyType = "Property Type*";
+  static const String numberOfrooms = "Number of Rooms*";
+  static const String areaM = "Area (m²)*";
+  static const String propertyCondition = "Property Condition*";
+  static const String floorNumber = "Floor Number*";
+  static const String totalNumberOfFloors = "Total Number of Floors*";
+  static const String heatingType = "Heating Type*";
+  static const String furnished = "Furnished?*";
+  static const String numberOfBathrooms = "Number of Bathrooms*";
+  static const String belconyAvailable = "Balcony Available?*";
+  static const String maintenaceFee = "Maintenance Fee (if any)*";
+  static const String price = "Price*";
+  static const String phoneNumberOfTheSeller = "Phone Number of the Seller/Owner*";
+  static const String helloWhatAreYouListingToday = "Hello,what are you\n listing today? ";
+  static const String choiceTheCetegoryThatYour = "Choice the cetegory that your add fits into";
 
 }
