@@ -10,7 +10,8 @@ class AssetsRes {
   static const String PROJECT_VERSION = '1.0.0+1';
   static const String DOUBLE_CHECK = 'assets/icons/Double Check.svg';
   static const String ICON = 'assets/icons/Icon.svg';
-  static const String VECTOR = 'assets/icons/Vector.svg';
+  static const String MENU = 'assets/icons/menu.svg';
+  static const String MESSAGE = 'assets/icons/message.svg';
   static const String BAG_1 = 'assets/images/bag 1.png';
   static const String CAR = 'assets/images/car.png';
   static const String CAR2 = 'assets/images/car2.png';
@@ -19,4 +20,5 @@ class AssetsRes {
   static const String MAP = 'assets/images/map.png';
   static const String PAWPRINT_1 = 'assets/images/pawprint 1.png';
   static const String SERVICE = 'assets/images/service.png';
+  static const String STATE = 'assets/images/state.png';
 }

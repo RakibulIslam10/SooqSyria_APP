@@ -6,7 +6,10 @@ class ServicesMobileScreen extends GetView<ServicesController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarWidget(title: "wellcome"),
+      appBar: AppBarWidget(
+        title: "200 Result",
+        titleColor: CustomColor.blackColor,
+      ),
       body: _bodyWidget(context),
     );
   }
@@ -15,7 +18,16 @@ class ServicesMobileScreen extends GetView<ServicesController> {
     return SafeArea(
       child: Padding(
         padding: Dimensions.defaultHorizontalSize.edgeHorizontal,
-        child: Column(children: [Sizes.height.v20,]),
+        child: Column(
+          children: [
+            Sizes.height.v20,
+            Row(
+              children: [
+                Wrap(children: [TextWidget(Strings.steering)]),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -11,6 +11,7 @@ import 'package:sooqyria/views/auth/reset_password/screen/reset_password_screen.
 import 'package:sooqyria/views/auth/reset_password_otp_screen/screen/reset_password_otp_screen.dart';
 
 import '../bindings/Menus_binding.dart';
+import '../bindings/all_car_list_binding.dart';
 import '../bindings/animals_binding.dart';
 import '../bindings/car_overview_binding.dart';
 import '../bindings/car_sub_category_binding.dart';
@@ -36,6 +37,7 @@ import '../bindings/set_password_binding.dart';
 import '../bindings/splash_binding.dart';
 import '../bindings/sub_category_binding.dart';
 import '../views/Menus/screen/Menus_screen.dart';
+import '../views/all_car_list/screen/all_car_list_screen.dart';
 import '../views/animals/screen/animals_screen.dart';
 import '../views/auth/login/screen/login_screen.dart';
 import '../views/car_overview/screen/car_overview_screen.dart';
@@ -97,4 +99,5 @@ class Routes {
   static const String sub_categoryScreen = '/sub_categoryScreen';
   static const String real_state_housingScreen = '/real_state_housingScreen';
   static const String housing_overviewScreen = '/housing_overviewScreen';
+  static const String all_car_listScreen = '/all_car_listScreen';
 }

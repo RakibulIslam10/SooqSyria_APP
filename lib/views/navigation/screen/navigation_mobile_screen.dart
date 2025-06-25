@@ -8,16 +8,15 @@ class NavigationMobileScreen extends GetView<NavigationController> {
     return Scaffold(
       extendBody: true,
       body: Obx(() => controller.bodyPages[controller.selectedIndex.value]),
-      bottomNavigationBar: const NavigationBarWidget(),
+      bottomNavigationBar:  NavigationBarWidget(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor: CustomColor.primary  ,
+        backgroundColor: CustomColor.primary,
         elevation: 6,
         shape: const CircleBorder(),
         child: const Icon(Icons.add, size: 30, color: Colors.white),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-
     );
   }
 }

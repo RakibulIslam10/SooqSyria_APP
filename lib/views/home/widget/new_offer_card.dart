@@ -23,9 +23,7 @@ class NewOfferCard extends GetView<HomeController> {
               margin: EdgeInsets.only(right: 10),
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: NetworkImage(
-                    'https://www.asseticltd.com/images/top-real-estate-companies-bangladesh.webp',
-                  ),
+                  image: AssetImage('assets/images/state.png'),
                   fit: BoxFit.cover,
                 ),
                 borderRadius: BorderRadius.circular(Dimensions.radius * 1.6),

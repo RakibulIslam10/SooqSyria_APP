@@ -59,7 +59,8 @@ flutter:
     - assets/icons/
     - assets/icons/Double Check.svg
     - assets/icons/Icon.svg
-    - assets/icons/Vector.svg
+    - assets/icons/menu.svg
+    - assets/icons/message.svg
     - assets/images/
     - assets/images/bag 1.png
     - assets/images/car.png
@@ -69,6 +70,7 @@ flutter:
     - assets/images/map.png
     - assets/images/pawprint 1.png
     - assets/images/service.png
+    - assets/images/state.png
     - assets/logo/
 
 

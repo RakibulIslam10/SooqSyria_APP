@@ -18,7 +18,10 @@ class RecommendedListing extends GetView<HomeController> {
               Strings.recommendedListings,
               fontWeight: FontWeight.bold,
             ),
-            SvgPicture.asset(Assets.icons.back),
+            GestureDetector(
+              onTap: () => Get.toNamed(Routes.favorited_itemsScreen),
+              child: SvgPicture.asset(Assets.icons.back),
+            ),
           ],
         ),
         SizedBox(
@@ -34,20 +37,19 @@ class RecommendedListing extends GetView<HomeController> {
                   padding: EdgeInsets.only(right: Dimensions.paddingSize * 0.5),
                   child: GestureDetector(
                     onTap: () {
-                      // Get.toNamed(Routes.allCarListScreen);
+                      Get.toNamed(Routes.all_car_listScreen);
                     },
                     child: Column(
                       mainAxisAlignment: mainCenter,
                       children: [
                         Container(
-                          padding: EdgeInsets.all(10),
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             color: Colors.white,
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.black.withOpacity(0.25),
-                                offset: const Offset(0, 6), // downwards
+                                offset: Offset(0, 6),
                                 blurRadius: 12, // strong blur
                                 spreadRadius: 1, // slight spread
                               ),
@@ -61,7 +63,7 @@ class RecommendedListing extends GetView<HomeController> {
                             vertical: Dimensions.verticalSize * 0.2,
                           ),
                           Strings.viewALl,
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w600,
                           fontSize: Dimensions.titleSmall,
                         ),
                       ],
