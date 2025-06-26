@@ -36,7 +36,6 @@ class MyApp extends StatelessWidget {
           fontFamily: 'Inter',
           scaffoldBackgroundColor: CustomColor.whiteColor,
         ),
-
         getPages: Routes.list,
         initialBinding: BindingsBuilder(() {
           Get.lazyPut(() => SplashController());

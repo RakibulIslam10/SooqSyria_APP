@@ -122,8 +122,6 @@ class Strings {
   static const String realEState = "Real Estate";
   static const String services = "Services";
 
-  //NEW
-
   static const String allFavourites = "All Favourites";
   static const String Default = "Default";
   static const String viewALl = "View All";
@@ -140,9 +138,11 @@ class Strings {
   static const String unread = "Unread";
   static const String postANAdd = "Post an Add";
   static const String yourChatIsEmpty = "Your chat is empty!";
-  static const String postAnAdOrMessageASellerToStart = "post an ad or message a seller to start seing conversation here";
+  static const String postAnAdOrMessageASellerToStart =
+      "post an ad or message a seller to start seing conversation here";
   static const String areYouVerified = "Are You Verified?";
-  static const String getMoreVisibilityAndEnhanceYourCredibility = "Get more visibility and enhance your credibility";
+  static const String getMoreVisibilityAndEnhanceYourCredibility =
+      "Get more visibility and enhance your credibility";
 
   static const String useTheFavoriteIconToSaveAdsThatYouWantToCheckLatter =
       "Use the favorite icon to save ads that you want to check latter.";
@@ -152,7 +152,8 @@ class Strings {
   static const String exploree = "Explore";
   static const String typeMessage = "Type a message...";
   static const String noNotificationYet = "No notifications...yet!";
-  static const String noNotificationStayUpDateText = "Stay up-date- with the latest listings that match what youreyou’re looking for.";
+  static const String noNotificationStayUpDateText =
+      "Stay up-date- with the latest listings that match what youreyou’re looking for.";
 
   static const String carOverview = "Car Overview";
   static const String bodyType = "Body Type ";
@@ -178,7 +179,8 @@ class Strings {
   static const String warranty = "Warranty";
   static const String targetMarket = "Target market";
   static const String year = "Year";
-  static const String shareThisProductWithFriends = "Share This Product With friends!";
+  static const String shareThisProductWithFriends =
+      "Share This Product With friends!";
   static const String kilimeters = "Kilimeters";
   static const String regionalSpecs = "Regional Specs";
   static const String sellerType = "Seller type ";
@@ -201,7 +203,8 @@ class Strings {
   static const String model = "Model";
   static const String placeAnAdd = "Place an ad";
   static const String tellUsAboutYourHousing = "Tell us about your Housing";
-  static const String whereShouldWePlaceYourAdd = "Where should we place your add?";
+  static const String whereShouldWePlaceYourAdd =
+      "Where should we place your add?";
   static const String selectCity = "Select a City";
   static const String listingType = "Listing Type";
   static const String aleppo = "Aleppo";
@@ -218,8 +221,19 @@ class Strings {
   static const String belconyAvailable = "Balcony Available?*";
   static const String maintenaceFee = "Maintenance Fee (if any)*";
   static const String price = "Price*";
-  static const String phoneNumberOfTheSeller = "Phone Number of the Seller/Owner*";
-  static const String helloWhatAreYouListingToday = "Hello,what are you\n listing today? ";
-  static const String choiceTheCetegoryThatYour = "Choice the cetegory that your add fits into";
+  static const String phoneNumberOfTheSeller =
+      "Phone Number of the Seller/Owner*";
+  static const String helloWhatAreYouListingToday =
+      "Hello,what are you\n listing today? ";
+  static const String choiceTheCetegoryThatYours =
+      "Choice the cetegory that your add fits into";
+
+
+
+  //NEW
+
+
+
+
 
 }

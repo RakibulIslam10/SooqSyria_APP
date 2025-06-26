@@ -23,7 +23,7 @@ class MenusMobileScreen extends GetView<MenusController> {
               margin: EdgeInsetsGeometry.symmetric(
                 vertical: Dimensions.verticalSize * 0.5,
               ),
-              padding: EdgeInsetsGeometry.all(Dimensions.paddingSize * 0.4),
+              padding: EdgeInsetsGeometry.all(Dimensions.paddingSize * 0.6),
               alignment: Alignment.centerLeft,
               decoration: BoxDecoration(
                 border: Border.all(
@@ -35,12 +35,14 @@ class MenusMobileScreen extends GetView<MenusController> {
               child: Column(
                 crossAxisAlignment: crossStart,
                 children: [
-                  // items(Strings.profile, 'assets/icons/Vector.svg'),
-                  // items(Strings.accountSetting, 'assets/images/acs.png'),
-                  // items(Strings.languageCurrrency, 'assets/icons/Vector.svg' ),
-                  // items(Strings.support, 'assets/icons/call.png'),
-                  // items(Strings.callUs, 'assets/images/call.png'),
-
+                  items(Assets.icons.profile, Strings.profile),
+                  items(Assets.icons.acs, Strings.accountSetting),
+                  items(Assets.icons.global, Strings.languageCurrrency),
+                  items(Assets.icons.support, Strings.support),
+                  items(Assets.icons.call, Strings.callUs),
+                  items(Assets.icons.police, Strings.policies),
+                  Sizes.height.v40,
+                  LogoutWidget()
                 ],
               ),
             ),
@@ -50,15 +52,14 @@ class MenusMobileScreen extends GetView<MenusController> {
     );
   }
 
-  items(String tag, String imagePath) {
+  items(String path, String title) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: Dimensions.verticalSize * 0.4),
+      padding: Dimensions.verticalSize.edgeVertical * 0.4,
       child: Wrap(
-        crossAxisAlignment: WrapCrossAlignment.center,
         children: [
-          SvgPicture.asset(imagePath),
-          Sizes.width.v5,
-          TextWidget(tag, fontWeight: FontWeight.w500),
+          Image.asset(path, height: Dimensions.iconSizeDefault * 1.2),
+          Sizes.width.v10,
+          TextWidget(title),
         ],
       ),
     );

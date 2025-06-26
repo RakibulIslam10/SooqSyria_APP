@@ -60,11 +60,13 @@ flutter:
     - assets/icons/Double Check.svg
     - assets/icons/Vector.svg
     - assets/icons/acs.png
-    - assets/icons/call.png
-    - assets/icons/icon.svg
+    - assets/icons/call icon.png
+    - assets/icons/global.png
     - assets/icons/menu.svg
     - assets/icons/message.svg
-    - assets/icons/support.png
+    - assets/icons/police.png
+    - assets/icons/pp.png
+    - assets/icons/ss.png
     - assets/images/
     - assets/images/bag 1.png
     - assets/images/car.png

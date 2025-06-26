@@ -11,11 +11,13 @@ class AssetsRes {
   static const String DOUBLE_CHECK = 'assets/icons/Double Check.svg';
   static const String VECTOR = 'assets/icons/Vector.svg';
   static const String ACS = 'assets/icons/acs.png';
-  static const String CALL = 'assets/icons/call.png';
-  static const String ICON = 'assets/icons/icon.svg';
+  static const String CALL_ICON = 'assets/icons/call icon.png';
+  static const String GLOBAL = 'assets/icons/global.png';
   static const String MENU = 'assets/icons/menu.svg';
   static const String MESSAGE = 'assets/icons/message.svg';
-  static const String SUPPORT = 'assets/icons/support.png';
+  static const String POLICE = 'assets/icons/police.png';
+  static const String PP = 'assets/icons/pp.png';
+  static const String SS = 'assets/icons/ss.png';
   static const String BAG_1 = 'assets/images/bag 1.png';
   static const String CAR = 'assets/images/car.png';
   static const String CAR2 = 'assets/images/car2.png';

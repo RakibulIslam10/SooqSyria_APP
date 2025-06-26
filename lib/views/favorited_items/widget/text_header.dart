@@ -17,7 +17,7 @@ class TextHeader extends GetView<FavoriteController> {
                 color: CustomColor.grayColor,
                 fontWeight: FontWeight.w500,
               ),
-              SvgPicture.asset(Assets.icons.back),
+              SvgPicture.asset(Assets.icons.menu),
             ],
           )
         : SizedBox();

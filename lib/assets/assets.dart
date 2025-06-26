@@ -85,12 +85,39 @@ class $Icons {
   String get empty => 'assets/icons/empty.svg';
 
   String get reject => 'assets/icons/reject.svg';
+
   String get success => 'assets/icons/success.svg';
+
   String get notification => 'assets/icons/notification.svg';
-  String get back => 'assets/icons/menu.svg';
 
+  String get menu => 'assets/icons/menu.svg';
 
-  List<dynamic> get values => [verified, empty, reject, success,back];
+  String get support => 'assets/icons/ss.png';
+
+  String get global => 'assets/icons/global.png';
+
+  String get call => 'assets/icons/call icon.png';
+
+  String get acs => 'assets/icons/acs.png';
+
+  String get police => 'assets/icons/police.png';
+
+  String get profile => 'assets/icons/pp.png';
+
+  List<dynamic> get values =>
+      [
+        verified,
+        empty,
+        reject,
+        success,
+        menu,
+        support,
+        global,
+        call,
+        acs,
+        police,
+        profile,
+      ];
 }
 
 class $Logo {
@@ -102,9 +129,5 @@ class $Logo {
 
   AssetGen get appTextLogo => const AssetGen('assets/logo/apptext.png');
 
-  List<dynamic> get values => [
-    appLauncher,
-    basicLogo,
-    appTextLogo,
-  ];
+  List<dynamic> get values => [appLauncher, basicLogo, appTextLogo];
 }
