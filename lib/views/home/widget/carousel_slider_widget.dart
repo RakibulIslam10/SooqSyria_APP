@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '/views/home/controller/home_controller.dart';
 import '../../../base/utils/basic_import.dart';
@@ -12,13 +13,12 @@ class CarouselSliderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
       width: double.infinity,
       child: CarouselSlider(
         carouselController: controller.carouselController,
         options: CarouselOptions(
           autoPlayAnimationDuration: Duration(seconds: 1),
-          height: 200,
+          height: 140.h,
           autoPlay: true,
           aspectRatio: 1,
           viewportFraction: 1,

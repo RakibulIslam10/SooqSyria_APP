@@ -14,7 +14,7 @@ class GridCardWidget extends GetView<HomeController> {
         crossAxisCount: 3,
         mainAxisSpacing: 16,
         crossAxisSpacing: 10,
-        childAspectRatio: 1,
+        childAspectRatio: 1.1,
       ),
       itemBuilder: (context, index) {
         final category = controller.categories[index];
@@ -23,13 +23,13 @@ class GridCardWidget extends GetView<HomeController> {
             Get.toNamed(Routes.categories_detailsScreen,arguments: category);
           },
           child: Card(
-            elevation: 5,
+            elevation: 1,
             color: CustomColor.whiteColor,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(5),
             ),
             child: Padding(
-              padding: EdgeInsets.all(Dimensions.paddingSize * 0.5),
+              padding: EdgeInsets.all(Dimensions.paddingSize * 0.2),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -44,7 +44,7 @@ class GridCardWidget extends GetView<HomeController> {
                     category.title,
                     fontWeight: FontWeight.bold,
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: Dimensions.titleSmall * 0.8),
+                    style: TextStyle(fontSize: Dimensions.titleSmall * 0.7),
                   ),
                 ],
               ),
