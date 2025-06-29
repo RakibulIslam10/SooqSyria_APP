@@ -233,7 +233,14 @@ class Strings {
   //NEW
 
 
-
+static const String myAdds = "My Adds";
+static const String allAdds = "All Adds";
+static const String live = "Live";
+static const String paymentPending = "Payment Pending";
+static const String completePayment = "Complete Payment";
+static const String areYouSureYouWantToLogOut = "Are you sure you want to log out ?";
+static const String no = "No";
+static const String yes = "Yes";
 
 
 }

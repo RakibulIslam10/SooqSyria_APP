@@ -27,6 +27,8 @@ import '../bindings/home_binding.dart';
 import '../bindings/housing_overview_binding.dart';
 import '../bindings/inbox_binding.dart';
 import '../bindings/login_binding.dart';
+import '../bindings/my_adds_binding.dart';
+import '../bindings/my_serches_binding.dart';
 import '../bindings/navigation_binding.dart';
 import '../bindings/new_and_used_product_binding.dart';
 import '../bindings/notification_binding.dart';
@@ -58,6 +60,8 @@ import '../views/favorited_items/screen/favorited_items_screen.dart';
 import '../views/home/screen/home_screen.dart';
 import '../views/housing_overview/screen/housing_overview_screen.dart';
 import '../views/inbox/screen/inbox_screen.dart';
+import '../views/my_adds/screen/my_adds_screen.dart';
+import '../views/my_serches/screen/my_serches_screen.dart';
 import '../views/navigation/screen/navigation_screen.dart';
 import '../views/new_and_used_product/screen/new_and_used_product_screen.dart';
 import '../views/notification/screen/notification_screen.dart';
@@ -116,4 +120,6 @@ class Routes {
   static const String selection_categoryScreen = '/selection_categoryScreen';
   static const String add_category_typeScreen = '/add_category_typeScreen';
   static const String add_place_fromScreen = '/add_place_fromScreen';
+  static const String my_addsScreen = '/my_addsScreen';
+  static const String my_serchesScreen = '/my_serchesScreen';
 }

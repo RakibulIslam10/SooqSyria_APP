@@ -36,7 +36,7 @@ class KeepLookingItems extends GetView<HomeController> {
                   ),
                   child: GestureDetector(
                     onTap: () {
-                      Get.toNamed(Routes.all_car_listScreen);
+                      // Get.toNamed(Routes.all_car_listScreen);
                     },
                     child: Column(
                       mainAxisAlignment: mainCenter,

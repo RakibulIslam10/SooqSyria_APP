@@ -1,4 +1,9 @@
-part of 'Menus_screen.dart';
+
+
+import 'package:flutter/material.dart';
+import 'package:sooqyria/views/Menus/controller/Menus_controller.dart';
+
+import '../../../base/utils/basic_import.dart';
 
 class MenusTabletScreen extends GetView<MenusController> {
   const MenusTabletScreen({super.key});

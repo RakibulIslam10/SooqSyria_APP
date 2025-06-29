@@ -1,4 +1,13 @@
-part of 'Menus_screen.dart';
+
+
+import 'package:flutter/material.dart';
+import 'package:sooqyria/assets/assets.dart';
+import 'package:sooqyria/views/Menus/widget/adds_searches_widget.dart';
+import 'package:sooqyria/views/Menus/widget/logout_widget.dart';
+import 'package:sooqyria/views/Menus/widget/menu_user_header.dart';
+
+import '../../../base/utils/basic_import.dart';
+import '../controller/Menus_controller.dart';
 
 class MenusMobileScreen extends GetView<MenusController> {
   const MenusMobileScreen({super.key});

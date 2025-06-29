@@ -1,6 +1,9 @@
 
 import 'package:flutter/cupertino.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
+import 'package:sooqyria/routes/routes.dart';
 
 import '../../../base/themes/token.dart';
 import '../../../base/utils/dimensions.dart';
@@ -17,46 +20,56 @@ class AddsSearchesWidget extends GetView<MenusController> {
     return Row(
       children: [
         Expanded(
-          child: Container(
-            height: MediaQuery.of(context).size.height * 0.11,
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: CustomColor.grayColor.withAlpha(88),
-                width: 1.5,
+          child: GestureDetector(
+            onTap: () {
+              Get.toNamed(Routes.my_addsScreen);
+            },
+            child: Container(
+              height: MediaQuery.of(context).size.height * 0.11,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: CustomColor.grayColor.withAlpha(88),
+                  width: 1.5,
+                ),
+                borderRadius: BorderRadius.circular(Dimensions.radius * 1.4),
               ),
-              borderRadius: BorderRadius.circular(Dimensions.radius * 1.4),
-            ),
-            child: FittedBox(
-              fit: BoxFit.scaleDown,
-              child: TextWidget(
-                Strings.myAds,
-                fontWeight: FontWeight.bold,
-                maxLines: 1,
-                textOverflow: TextOverflow.ellipsis,
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: TextWidget(
+                  Strings.myAds,
+                  fontWeight: FontWeight.bold,
+                  maxLines: 1,
+                  textOverflow: TextOverflow.ellipsis,
+                ),
               ),
             ),
           ),
         ),
         Sizes.width.v20,
         Expanded(
-          child: Container(
-            height: MediaQuery.of(context).size.height * 0.11,
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: CustomColor.grayColor.withAlpha(88),
-                width: 1.5,
+          child: GestureDetector(
+            onTap: () {
+              Get.toNamed(Routes.my_serchesScreen);
+            },
+            child: Container(
+              height: MediaQuery.of(context).size.height * 0.11,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: CustomColor.grayColor.withAlpha(88),
+                  width: 1.5,
+                ),
+                borderRadius: BorderRadius.circular(Dimensions.radius * 1.4),
               ),
-              borderRadius: BorderRadius.circular(Dimensions.radius * 1.4),
-            ),
-            child: FittedBox(
-              fit: BoxFit.scaleDown,
-              child: TextWidget(
-                Strings.mySearches,
-                fontWeight: FontWeight.bold,
-                maxLines: 1,
-                textOverflow: TextOverflow.ellipsis,
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: TextWidget(
+                  Strings.mySearches,
+                  fontWeight: FontWeight.bold,
+                  maxLines: 1,
+                  textOverflow: TextOverflow.ellipsis,
+                ),
               ),
             ),
           ),

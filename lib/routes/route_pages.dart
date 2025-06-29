@@ -3,6 +3,18 @@ part of '../routes/routes.dart';
 class RoutePageList {
   static var list = [
     GetPage(
+      name: Routes.my_serchesScreen,
+      page: () => const MySerchesScreen(),
+      binding: MySerchesBinding(),
+    ),
+    
+    GetPage(
+      name: Routes.my_addsScreen,
+      page: () => const MyAddsScreen(),
+      binding: MyAddsBinding(),
+    ),
+    
+    GetPage(
       name: Routes.add_place_fromScreen,
       page: () => const AddPlaceFromScreen(),
       binding: AddPlaceFromBinding(),

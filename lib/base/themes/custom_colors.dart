@@ -26,7 +26,7 @@ class CustomColor {
   static Color delivered = HexColor('#FFFFFF');
   static Color canceled = HexColor('#FFFFFF');
   static Color selected = HexColor('#27B059');
-  static Color rejected = HexColor('#DC3A3A');
+  static Color rejected = HexColor('#FF0505');
   static Color whiteShadeBlue = HexColor('#DFE7ED');
   static Color backgroundScaffoldColor = HexColor('#185F90');
   static Color whiteShadeColor = HexColor('#EEF0F7');

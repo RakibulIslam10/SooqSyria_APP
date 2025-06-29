@@ -7,18 +7,17 @@ class ApiServices {
   static var client = http.Client();
 
   // Generic API service method
-  static Future<T?> apiService<T>(
-    T Function(Map<String, dynamic>) fromJson,
-    String apiEndpoint, {
-    Map<String, dynamic>? body,
-    String method = 'GET',
-    int statusCode = 200,
-    bool showResult = false,
-    bool isBasic = false,
-    bool showSuccessMessage = false,
-    bool showErrorMessage = true,
-    String tostTitle = 'Success',
-  }) async {
+  static Future<T?> apiService<T>(T Function(Map<String, dynamic>) fromJson,
+      String apiEndpoint, {
+        Map<String, dynamic>? body,
+        String method = 'GET',
+        int statusCode = 200,
+        bool showResult = false,
+        bool isBasic = false,
+        bool showSuccessMessage = false,
+        bool showErrorMessage = true,
+        String tostTitle = 'Success',
+      }) async {
     try {
       Map<String, dynamic>? mapResponse;
 
@@ -52,19 +51,19 @@ class ApiServices {
 
   // Method for multipart file uploads
   static Future<T?> multipartApiService<T>(
-    T Function(Map<String, dynamic>) fromJson,
-    String apiEndpoint,
-    Map<String, String> body,
-    List<String> fieldList,
-    List<String> pathList, {
-    int statusCode = 200,
-    bool isBasic = false,
-    bool showSuccessMessage = false,
-    String tostTitle = Strings.success,
-  }) async {
+      T Function(Map<String, dynamic>) fromJson,
+      String apiEndpoint,
+      Map<String, String> body,
+      List<String> fieldList,
+      List<String> pathList, {
+        int statusCode = 200,
+        bool isBasic = false,
+        bool showSuccessMessage = false,
+        String tostTitle = Strings.success,
+      }) async {
     try {
       Map<String, dynamic>? mapResponse =
-          await ApiMethod(isBasic: isBasic).multipartMultiFile(
+      await ApiMethod(isBasic: isBasic).multipartMultiFile(
         apiEndpoint,
         body,
         fieldList: fieldList,
@@ -83,12 +82,10 @@ class ApiServices {
   }
 
   // Helper method to handle responses
-  static T? _handleResponse<T>(
-    Map<String, dynamic> mapResponse,
-    T Function(Map<String, dynamic>) fromJson,
-    bool showSuccessMessage,
-    String tostTitle,
-  ) {
+  static T? _handleResponse<T>(Map<String, dynamic> mapResponse,
+      T Function(Map<String, dynamic>) fromJson,
+      bool showSuccessMessage,
+      String tostTitle,) {
     T result = fromJson(mapResponse);
 
     if (showSuccessMessage) {

@@ -8,8 +8,8 @@ import '../../../base/utils/basic_import.dart';
 import '../controller/Menus_controller.dart';
 import '../widget/adds_searches_widget.dart';
 import '../widget/logout_widget.dart';
-part 'Menus_tablet_screen.dart';
-part 'Menus_mobile_screen.dart';
+import 'Menus_mobile_screen.dart';
+import 'Menus_tablet_screen.dart';
 
 
 class MenusScreen extends GetView<MenusController> {
