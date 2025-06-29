@@ -57,7 +57,7 @@ class LogoutWidget extends GetView<MenusController> {
                       horizontal: Dimensions.defaultHorizontalSize * 0.8,
                     ),
                     decoration: BoxDecoration(
-                      color:  Color(0xffFF3636),
+                      color: Color(0xffFF3636),
                       borderRadius: BorderRadius.circular(
                         Dimensions.radius * 2,
                       ),

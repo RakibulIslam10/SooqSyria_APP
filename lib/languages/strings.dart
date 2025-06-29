@@ -228,19 +228,32 @@ class Strings {
   static const String choiceTheCetegoryThatYours =
       "Choice the cetegory that your add fits into";
 
-
-
   //NEW
 
-
-static const String myAdds = "My Adds";
-static const String allAdds = "All Adds";
-static const String live = "Live";
-static const String paymentPending = "Payment Pending";
-static const String completePayment = "Complete Payment";
-static const String areYouSureYouWantToLogOut = "Are you sure you want to log out ?";
-static const String no = "No";
-static const String yes = "Yes";
-
-
+  static const String myAdds = "My Adds";
+  static const String allAdds = "All Adds";
+  static const String live = "Live";
+  static const String paymentPending = "Payment Pending";
+  static const String completePayment = "Complete Payment";
+  static const String areYouSureYouWantToLogOut =
+      "Are you sure you want to log out ?";
+  static const String no = "No";
+  static const String yes = "Yes";
+  static const String myProfile = "My Profile";
+  static const String myAddresses = "My Addresses";
+  static const String myJobProfile = "MY Job Profile";
+  static const String myPublicProfile = "My Public Profile";
+  static const String deleteAccount = "Delete Account";
+  static const String copyProfileUrl = "Copy profile URL";
+  static const String changePicture = "Change Picture";
+  static const String clickHereToPostYourAdImmediately =
+      "Click here to post your ad immediately";
+  static const String noListing = "No Listing";
+  static const String address = "Address ";
+  static const String reload = "Reload";
+  static const String addNewLocation = "+ Add new location";
+  static const String addressNotFound = "Address not Found ";
+  static const String youHaveNoAddressCurrentlyRegister =
+      "you have no address currently register";
+  static const String email = "Email";
 }

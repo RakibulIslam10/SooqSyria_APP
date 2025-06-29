@@ -3,42 +3,65 @@ part of '../routes/routes.dart';
 class RoutePageList {
   static var list = [
     GetPage(
+      name: Routes.account_settingsScreen,
+      page: () => const AccountSettingsScreen(),
+      binding: AccountSettingsBinding(),
+    ),
+
+    GetPage(
+      name: Routes.addressScreen,
+      page: () => const AddressScreen(),
+      binding: AddressBinding(),
+    ),
+
+    GetPage(
+      name: Routes.aaccount_detailsScreen,
+      page: () => const AaccountDetailsScreen(),
+      binding: AaccountDetailsBinding(),
+    ),
+
+    GetPage(
+      name: Routes.profile_sectionScreen,
+      page: () => const ProfileSectionScreen(),
+      binding: ProfileSectionBinding(),
+    ),
+
+    GetPage(
       name: Routes.my_serchesScreen,
       page: () => const MySerchesScreen(),
       binding: MySerchesBinding(),
     ),
-    
+
     GetPage(
       name: Routes.my_addsScreen,
       page: () => const MyAddsScreen(),
       binding: MyAddsBinding(),
     ),
-    
+
     GetPage(
       name: Routes.add_place_fromScreen,
       page: () => const AddPlaceFromScreen(),
       binding: AddPlaceFromBinding(),
     ),
-    
+
     GetPage(
       name: Routes.add_category_typeScreen,
       page: () => const AddCategoryTypeScreen(),
       binding: AddCategoryTypeBinding(),
     ),
-    
+
     GetPage(
       name: Routes.selection_categoryScreen,
       page: () => const SelectionCategoryScreen(),
       binding: SelectionCategoryBinding(),
     ),
-    
+
     GetPage(
       name: Routes.select_cityScreen,
       page: () => const SelectCityScreen(),
       binding: SelectCityBinding(),
     ),
-    
-    
+
     GetPage(
       transition: Transition.rightToLeft,
       name: Routes.car_categoriesScreen,

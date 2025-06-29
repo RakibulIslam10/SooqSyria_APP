@@ -1,7 +1,6 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:sooqyria/assets/assets.dart';
+import 'package:sooqyria/routes/routes.dart';
 import 'package:sooqyria/views/Menus/widget/adds_searches_widget.dart';
 import 'package:sooqyria/views/Menus/widget/logout_widget.dart';
 import 'package:sooqyria/views/Menus/widget/menu_user_header.dart';
@@ -44,14 +43,39 @@ class MenusMobileScreen extends GetView<MenusController> {
               child: Column(
                 crossAxisAlignment: crossStart,
                 children: [
-                  items(Assets.icons.profile, Strings.profile),
-                  items(Assets.icons.acs, Strings.accountSetting),
-                  items(Assets.icons.global, Strings.languageCurrrency),
-                  items(Assets.icons.support, Strings.support),
-                  items(Assets.icons.call, Strings.callUs),
-                  items(Assets.icons.police, Strings.policies),
+                  items(
+                    Assets.icons.profile,
+                    Strings.profile,
+                    () => Get.toNamed(Routes.profile_sectionScreen),
+                  ),
+                  items(
+                    Assets.icons.acs,
+                    Strings.accountSetting,
+                    () => Get.toNamed(Routes.account_settingsScreen),
+                  ),
+                  items(
+                    Assets.icons.global,
+                    Strings.languageCurrrency,
+
+                    () => Get.toNamed(Routes.profile_sectionScreen),
+                  ),
+                  items(
+                    Assets.icons.support,
+                    Strings.support,
+                    () => Get.toNamed(Routes.profile_sectionScreen),
+                  ),
+                  items(
+                    Assets.icons.call,
+                    Strings.callUs,
+                    () => Get.toNamed(Routes.profile_sectionScreen),
+                  ),
+                  items(
+                    Assets.icons.police,
+                    Strings.policies,
+                    () => Get.toNamed(Routes.profile_sectionScreen),
+                  ),
                   Sizes.height.v40,
-                  LogoutWidget()
+                  LogoutWidget(),
                 ],
               ),
             ),
@@ -61,15 +85,18 @@ class MenusMobileScreen extends GetView<MenusController> {
     );
   }
 
-  items(String path, String title) {
+  items(String path, String title, Function()? onTap) {
     return Padding(
       padding: Dimensions.verticalSize.edgeVertical * 0.4,
-      child: Wrap(
-        children: [
-          Image.asset(path, height: Dimensions.iconSizeDefault * 1.2),
-          Sizes.width.v10,
-          TextWidget(title),
-        ],
+      child: GestureDetector(
+        onTap: onTap ?? () {},
+        child: Wrap(
+          children: [
+            Image.asset(path, height: Dimensions.iconSizeDefault * 1.2),
+            Sizes.width.v10,
+            TextWidget(title),
+          ],
+        ),
       ),
     );
   }

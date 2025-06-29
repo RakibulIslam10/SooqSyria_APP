@@ -11,8 +11,11 @@ import 'package:sooqyria/views/auth/reset_password/screen/reset_password_screen.
 import 'package:sooqyria/views/auth/reset_password_otp_screen/screen/reset_password_otp_screen.dart';
 
 import '../bindings/Menus_binding.dart';
+import '../bindings/aaccount_details_binding.dart';
+import '../bindings/account_settings_binding.dart';
 import '../bindings/add_category_type_binding.dart';
 import '../bindings/add_place_from_binding.dart';
+import '../bindings/address_binding.dart';
 import '../bindings/all_car_list_binding.dart';
 import '../bindings/animals_binding.dart';
 import '../bindings/car_categories_binding.dart';
@@ -33,6 +36,7 @@ import '../bindings/navigation_binding.dart';
 import '../bindings/new_and_used_product_binding.dart';
 import '../bindings/notification_binding.dart';
 import '../bindings/onboard_binding.dart';
+import '../bindings/profile_section_binding.dart';
 import '../bindings/real_state_housing_binding.dart';
 import '../bindings/register_binding.dart';
 import '../bindings/reset_password_otp_binding.dart';
@@ -44,8 +48,11 @@ import '../bindings/set_password_binding.dart';
 import '../bindings/splash_binding.dart';
 import '../bindings/sub_category_binding.dart';
 import '../views/Menus/screen/Menus_screen.dart';
+import '../views/aaccount_details/screen/aaccount_details_screen.dart';
+import '../views/account_settings/screen/account_settings_screen.dart';
 import '../views/add_category_type/screen/add_category_type_screen.dart';
 import '../views/add_place_from/screen/add_place_from_screen.dart';
+import '../views/address/screen/address_screen.dart';
 import '../views/all_car_list/screen/all_car_list_screen.dart';
 import '../views/animals/screen/animals_screen.dart';
 import '../views/auth/login/screen/login_screen.dart';
@@ -66,6 +73,7 @@ import '../views/navigation/screen/navigation_screen.dart';
 import '../views/new_and_used_product/screen/new_and_used_product_screen.dart';
 import '../views/notification/screen/notification_screen.dart';
 import '../views/onboard/screen/onboard_screen.dart';
+import '../views/profile_section/screen/profile_section_screen.dart';
 import '../views/real_state_housing/screen/real_state_housing_screen.dart';
 import '../views/select_city/screen/select_city_screen.dart';
 import '../views/selection_category/screen/selection_category_screen.dart';
@@ -122,4 +130,8 @@ class Routes {
   static const String add_place_fromScreen = '/add_place_fromScreen';
   static const String my_addsScreen = '/my_addsScreen';
   static const String my_serchesScreen = '/my_serchesScreen';
+  static const String profile_sectionScreen = '/profile_sectionScreen';
+  static const String aaccount_detailsScreen = '/aaccount_detailsScreen';
+  static const String addressScreen = '/addressScreen';
+  static const String account_settingsScreen = '/account_settingsScreen';
 }

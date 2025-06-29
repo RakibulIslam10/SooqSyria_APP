@@ -125,7 +125,7 @@ class _PrimaryInputWidgetState extends State<PrimaryInputWidget> {
               : "${''} ${widget.hintText}",
       hintStyle: CustomStyle.bodyMedium.copyWith(
         fontWeight: FontWeight.w500,
-        color: Colors.black,
+        color: Colors.grey,
       ),
       border: _setBorderStyle(BSS.b),
       enabledBorder: _setBorderStyle(BSS.enabledBorder),
