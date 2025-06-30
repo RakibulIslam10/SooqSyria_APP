@@ -20,10 +20,10 @@ class AddressMobileScreen extends GetView<AddressController> {
         padding: EdgeInsets.symmetric(
           horizontal: Dimensions.defaultHorizontalSize,
         ),
-        child:
-          Column(children: [
-            AddressNotFoundWidgets()
-          ],)
+        child: Column(
+          mainAxisAlignment: mainCenter,
+          children: [AddressNotFoundWidgets()],
+        ),
       ),
     );
   }

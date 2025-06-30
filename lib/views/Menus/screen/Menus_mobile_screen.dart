@@ -72,7 +72,7 @@ class MenusMobileScreen extends GetView<MenusController> {
                   items(
                     Assets.icons.police,
                     Strings.policies,
-                    () => Get.toNamed(Routes.profile_sectionScreen),
+                    () => Get.toNamed(Routes.policiesScreen),
                   ),
                   Sizes.height.v40,
                   LogoutWidget(),

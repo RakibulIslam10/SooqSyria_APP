@@ -12,6 +12,7 @@ import 'package:sooqyria/views/auth/reset_password_otp_screen/screen/reset_passw
 
 import '../bindings/Menus_binding.dart';
 import '../bindings/aaccount_details_binding.dart';
+import '../bindings/about_us_binding.dart';
 import '../bindings/account_settings_binding.dart';
 import '../bindings/add_category_type_binding.dart';
 import '../bindings/add_place_from_binding.dart';
@@ -37,6 +38,8 @@ import '../bindings/navigation_binding.dart';
 import '../bindings/new_and_used_product_binding.dart';
 import '../bindings/notification_binding.dart';
 import '../bindings/onboard_binding.dart';
+import '../bindings/policies_binding.dart';
+import '../bindings/privacy_policy_binding.dart';
 import '../bindings/profile_section_binding.dart';
 import '../bindings/real_state_category_binding.dart';
 import '../bindings/real_state_housing_binding.dart';
@@ -49,9 +52,11 @@ import '../bindings/services_binding.dart';
 import '../bindings/set_password_binding.dart';
 import '../bindings/splash_binding.dart';
 import '../bindings/sub_category_binding.dart';
+import '../bindings/terms_condition_binding.dart';
 import '../bindings/vehicles_category_binding.dart';
 import '../views/Menus/screen/Menus_screen.dart';
 import '../views/aaccount_details/screen/aaccount_details_screen.dart';
+import '../views/about_us/screen/about_us_screen.dart';
 import '../views/account_settings/screen/account_settings_screen.dart';
 import '../views/add_category_type/screen/add_category_type_screen.dart';
 import '../views/add_place_from/screen/add_place_from_screen.dart';
@@ -77,6 +82,8 @@ import '../views/navigation/screen/navigation_screen.dart';
 import '../views/new_and_used_product/screen/new_and_used_product_screen.dart';
 import '../views/notification/screen/notification_screen.dart';
 import '../views/onboard/screen/onboard_screen.dart';
+import '../views/policies/screen/policies_screen.dart';
+import '../views/privacy_policy/screen/privacy_policy_screen.dart';
 import '../views/profile_section/screen/profile_section_screen.dart';
 import '../views/real_state_category/screen/real_state_category_screen.dart';
 import '../views/real_state_housing/screen/real_state_housing_screen.dart';
@@ -87,6 +94,7 @@ import '../views/services/screen/services_screen.dart';
 import '../views/set_password/screen/set_password_screen.dart';
 import '../views/splash/screen/splash_screen.dart';
 import '../views/sub_category/screen/sub_category_screen.dart';
+import '../views/terms_condition/screen/terms_condition_screen.dart';
 import '../views/vehicles_category/screen/vehicles_category_screen.dart';
 part '../routes/route_pages.dart';
 
@@ -143,4 +151,8 @@ class Routes {
   static const String real_state_categoryScreen = '/real_state_categoryScreen';
   static const String vehicles_categoryScreen = '/vehicles_categoryScreen';
   static const String job_offers_categoryScreen = '/job_offers_categoryScreen';
+  static const String policiesScreen = '/policiesScreen';
+  static const String about_usScreen = '/about_usScreen';
+  static const String privacy_policyScreen = '/privacy_policyScreen';
+  static const String terms_conditionScreen = '/terms_conditionScreen';
 }

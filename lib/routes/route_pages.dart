@@ -3,12 +3,36 @@ part of '../routes/routes.dart';
 class RoutePageList {
   static var list = [
     GetPage(
+      name: Routes.terms_conditionScreen,
+      page: () => const TermsConditionScreen(),
+      binding: TermsConditionBinding(),
+    ),
+
+    GetPage(
+      name: Routes.privacy_policyScreen,
+      page: () => const PrivacyPolicyScreen(),
+      binding: PrivacyPolicyBinding(),
+    ),
+
+    GetPage(
+      name: Routes.about_usScreen,
+      page: () => const AboutUsScreen(),
+      binding: AboutUsBinding(),
+    ),
+
+    GetPage(
+      name: Routes.policiesScreen,
+      page: () => const PoliciesScreen(),
+      binding: PoliciesBinding(),
+    ),
+
+    GetPage(
       transition: Transition.rightToLeft,
       name: Routes.job_offers_categoryScreen,
       page: () => const JobOffersCategoryScreen(),
       binding: JobOffersCategoryBinding(),
     ),
-    
+
     GetPage(
       transition: Transition.rightToLeft,
 

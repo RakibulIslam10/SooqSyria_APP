@@ -256,5 +256,9 @@ class Strings {
   static const String youHaveNoAddressCurrentlyRegister =
       "you have no address currently register";
   static const String email = "Email";
+  static const String aboutUS = "About us";
+  static const String termsCondition = "Terms of conditions";
+  static const String privacyPolicy = "Privacy policy";
   static const String Vehicles = "VEHICLES";
+  static const String saveChange = "Save Change";
 }
