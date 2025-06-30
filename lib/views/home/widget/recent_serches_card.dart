@@ -1,6 +1,6 @@
 part of '../screen/home_screen.dart';
 
-class RecentSerchesCard extends StatelessWidget {
+class RecentSerchesCard extends GetView<HomeController> {
   const RecentSerchesCard({super.key});
 
   @override
@@ -11,51 +11,30 @@ class RecentSerchesCard extends StatelessWidget {
       crossAxisAlignment: crossStart,
       children: [
         TextWidget(
-          padding: EdgeInsets.only(top: Dimensions.verticalSize * 0.4),
+          padding: EdgeInsets.only(top: Dimensions.verticalSize * 0.8),
           Strings.recentSearch,
           fontWeight: FontWeight.bold,
         ),
         SizedBox(
-          height: MediaQuery.of(context).size.width * 0.28,
+          height: MediaQuery.of(context).size.width * 0.22,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: 10,
+            itemCount: controller.carInfoDataList.length,
             itemBuilder: (context, index) => Container(
               margin: EdgeInsets.symmetric(
-                vertical: Dimensions.verticalSize * 0.5,
+                vertical: Dimensions.verticalSize * 0.3,
                 horizontal: Dimensions.widthSize * 0.4,
               ),
-              width: width * 0.85,
-              padding: const EdgeInsets.all(12),
+              width: width * 0.75,
+              padding: EdgeInsets.all(5),
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(Dimensions.radius * 0.8),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.1),
-                    blurRadius: 10,
-                    offset: const Offset(0, 4),
-                  ),
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.06),
-                    blurRadius: 10,
-                    offset: const Offset(-2, 2),
-                  ),
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.06),
-                    blurRadius: 10,
-                    offset: const Offset(-2, 2),
-                  ),
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.06),
-                    blurRadius: 10,
-                    offset: const Offset(-2, 2),
-                  ),
-
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.05),
-                    blurRadius: 12,
-                    offset: const Offset(2, -2),
+                    color: Colors.black.withOpacity(0.4),
+                    blurRadius: 8,
+                    offset: const Offset(0, 1.5),
                   ),
                 ],
               ),
@@ -65,7 +44,7 @@ class RecentSerchesCard extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(8),
                     child: Image.asset(
-                      'assets/images/car.png',
+                      controller.carInfoDataList[index].image,
                       width: 80,
                       height: 60,
                       fit: BoxFit.cover,
@@ -75,9 +54,9 @@ class RecentSerchesCard extends StatelessWidget {
                   Sizes.width.v10,
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       TextWidget(
-                        "BMW X2 2.0M Sport",
+                        controller.carInfoDataList[index].title,
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w600,
@@ -86,12 +65,9 @@ class RecentSerchesCard extends StatelessWidget {
                       ),
                       SizedBox(height: 4),
                       TextWidget(
-                        "VEHICLES",
-                        style: TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black87,
-                        ),
+                        Strings.Vehicles,
+                        fontWeight: FontWeight.bold,
+                        fontSize: Dimensions.titleSmall * 0.95,
                       ),
                     ],
                   ),

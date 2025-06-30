@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sooqyria/assets/assets.dart';
 
 import '../../../base/utils/basic_import.dart';
 import 'bottom_item.dart';
@@ -12,7 +13,7 @@ class NavigationBarWidget extends StatelessWidget {
       color: CustomColor.whiteColor,
       padding: EdgeInsets.zero,
       clipBehavior: Clip.antiAlias,
-      height: Dimensions.heightSize * 4,
+      height: Dimensions.heightSize * 5,
       shape: CircularNotchedRectangle(),
       notchMargin: 10,
       elevation: 5,
@@ -27,7 +28,7 @@ class NavigationBarWidget extends StatelessWidget {
                 top: Dimensions.paddingSize * 0.2,
               ),
               child: BottomItem(
-                icon: Icons.home_outlined,
+                path: Assets.icons.home,
                 label: Strings.home,
                 index: 0,
               ),
@@ -64,7 +65,7 @@ class NavigationBarWidget extends StatelessWidget {
                     : 0,
               ),
               child: BottomItem(
-                icon: Icons.mark_chat_read_outlined,
+                path: Assets.icons.inbox,
                 label: Strings.inbox,
                 index: 2,
               ),
@@ -77,7 +78,8 @@ class NavigationBarWidget extends StatelessWidget {
                 left: Dimensions.paddingSize * 0.5,
               ),
               child: BottomItem(
-                icon: Icons.menu,
+                path: Assets.icons.menuNav,
+                svgSize: Dimensions.iconSizeSmall * 1.4,
                 label: Strings.menu,
                 index: 3,
               ),

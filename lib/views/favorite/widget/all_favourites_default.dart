@@ -49,7 +49,7 @@ class AllFavouritesDefault extends GetView<FavoriteController> {
             );
           }
 
-          final item = controller.homeController.carInfoList[index];
+          final item = controller.homeController.carInfoDataList[index];
 
           return Obx(() {
             final isFav = controller.isFavorite(item);

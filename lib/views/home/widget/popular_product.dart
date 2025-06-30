@@ -1,7 +1,7 @@
 part of '../screen/home_screen.dart';
 
 class PopularProduct extends GetView<HomeController> {
-  const PopularProduct({Key? key}) : super(key: key);
+  const PopularProduct({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,98 +13,82 @@ class PopularProduct extends GetView<HomeController> {
             mainAxisAlignment: mainSpaceBet,
             children: [
               TextWidget(
-                padding: EdgeInsets.symmetric(
-                  vertical: Dimensions.verticalSize * 0.4,
+                padding: EdgeInsets.only(
+                  bottom: Dimensions.verticalSize * 0.2,
+                  top: Dimensions.verticalSize * 0.4,
                 ),
                 Strings.popularInProduct,
                 fontWeight: FontWeight.bold,
               ),
-              Icon(Icons.arrow_forward_outlined)
+              Image.asset(Assets.icons.goArrow),
             ],
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.2,
+            height: MediaQuery.of(context).size.height * 0.21,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: controller.carInfoList.length > 3
-                  ? 4
-                  : controller.carInfoList.length,
+              itemCount: controller.carInfoDataList.length,
               itemBuilder: (context, index) {
-                if (index == 3 && controller.carInfoList.length > 3) {
-                  return Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: Dimensions.paddingSize * 0.5,
-                    ),
-                    child: GestureDetector(
-                      onTap: () {
-                        // Get.toNamed(Routes.all_car_listScreen);
-                      },
-                      child: Column(
-                        mainAxisAlignment: mainCenter,
-                        children: [
-                          Container(
-                            padding: EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black.withOpacity(0.25),
-                                  offset: Offset(0, 6),
-                                  blurRadius: 12, // strong blur
-                                  spreadRadius: 1, // slight spread
-                                ),
-                              ],
-                            ),
-                            child: Icon(Icons.arrow_forward_outlined),
-                          ),
-
-                          TextWidget(
-                            padding: EdgeInsetsGeometry.symmetric(
-                              vertical: Dimensions.verticalSize * 0.2,
-                            ),
-                            Strings.viewALl,
-                            fontWeight: FontWeight.w600,
-                            fontSize: Dimensions.titleSmall,
-                          ),
-                        ],
-                      ),
-                    ),
-                  );
-                }
-                return Card(
-                  color: Colors.purpleAccent,
-                  elevation: 10,
+                final info = controller.carInfoDataList[index];
+                return GestureDetector(
+                  onTap: () {
+                    Get.toNamed(
+                      Routes.car_overviewScreen,
+                      arguments: controller.carInfoDataList[index],
+                    );
+                  },
                   child: Container(
+                    margin: EdgeInsets.symmetric(
+                      vertical: Dimensions.verticalSize * 0.3,
+                      horizontal: Dimensions.widthSize * 0.4,
+                    ),
                     width: MediaQuery.of(context).size.width * 0.4,
-                    padding: EdgeInsets.all(5),
                     decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.2),
+                          blurRadius: 8,
+                          offset: const Offset(0, 1.5),
+                        ),
+                      ],
                       color: CustomColor.whiteColor,
                       borderRadius: BorderRadius.circular(
-                        Dimensions.radius * 0.4,
+                        Dimensions.radius * 0.8,
                       ),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Image.asset(
-                          'assets/images/car.png',
+                          info.image,
                           width: double.maxFinite,
                           fit: BoxFit.cover,
+                          height: MediaQuery.of(context).size.height * 0.12,
                         ),
 
                         TextWidget(
-                          'AED 120.2120',
+                          padding: Dimensions.widthSize.edgeHorizontal,
+                          info.price,
+                          maxLines: 1,
+                          textOverflow: TextOverflow.ellipsis,
+
                           fontSize: Dimensions.titleSmall * 0.8,
                           color: CustomColor.primary,
                           fontWeight: FontWeight.bold,
                         ),
                         TextWidget(
-                          "BYD.HAN.Extend",
+                          padding: Dimensions.widthSize.edgeHorizontal,
+                          info.title,
+                          maxLines: 1,
+                          textOverflow: TextOverflow.ellipsis,
+
                           fontSize: Dimensions.titleSmall * 0.8,
                         ),
                         TextWidget(
-                          "2015.15Km",
+                          padding: Dimensions.widthSize.edgeHorizontal,
+                          info.distance,
+                          maxLines: 1,
+                          textOverflow: TextOverflow.ellipsis,
                           color: CustomColor.grayColor,
                           fontSize: Dimensions.titleSmall * 0.8,
                         ),

@@ -27,7 +27,22 @@ class SafetyFeaturesBottomWidget extends GetView<CarOverviewController> {
               ),
               child: ListView(
                 children: [
-                  TextWidget(Strings.features, fontWeight: FontWeight.bold),
+                  Padding(
+                    padding:  EdgeInsetsGeometry.only(bottom: Dimensions.verticalSize * 0.5),
+                    child: Row(
+                      mainAxisAlignment: mainSpaceBet,
+                      children: [
+                        TextWidget(
+                          Strings.features,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        GestureDetector(
+                          onTap: () => Get.back(),
+                          child: Icon(Icons.close),
+                        ),
+                      ],
+                    ),
+                  ),
                   Divider(color: CustomColor.whiteShadeBlue),
                   moreFeaturesShow([
                     "ABS (Anti-lock Braking System)",

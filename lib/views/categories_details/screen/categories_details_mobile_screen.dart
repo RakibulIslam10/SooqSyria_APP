@@ -12,6 +12,7 @@ class CategoriesDetailsMobileScreen
     Strings.caravans,
     Strings.carPartsAndAccesories,
   ];
+  final List<String> realStateList = ['Housing', "Commercial", "Plots"];
 
   @override
   Widget build(BuildContext context) {

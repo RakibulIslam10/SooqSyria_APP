@@ -58,11 +58,14 @@ flutter:
   assets:
     - assets/icons/
     - assets/icons/Double Check.svg
-    - assets/icons/Vector.svg
     - assets/icons/acs.png
     - assets/icons/call icon.png
     - assets/icons/global.png
+    - assets/icons/goarrow.png
+    - assets/icons/home.svg
+    - assets/icons/inboxNav.svg
     - assets/icons/menu.svg
+    - assets/icons/menuNav.svg
     - assets/icons/message.svg
     - assets/icons/police.png
     - assets/icons/pp.png

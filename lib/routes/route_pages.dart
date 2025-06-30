@@ -3,6 +3,28 @@ part of '../routes/routes.dart';
 class RoutePageList {
   static var list = [
     GetPage(
+      transition: Transition.rightToLeft,
+      name: Routes.job_offers_categoryScreen,
+      page: () => const JobOffersCategoryScreen(),
+      binding: JobOffersCategoryBinding(),
+    ),
+    
+    GetPage(
+      transition: Transition.rightToLeft,
+
+      name: Routes.vehicles_categoryScreen,
+      page: () => const VehiclesCategoryScreen(),
+      binding: VehiclesCategoryBinding(),
+    ),
+
+    GetPage(
+      name: Routes.real_state_categoryScreen,
+      transition: Transition.rightToLeft,
+      page: () => const RealStateCategoryScreen(),
+      binding: RealStateCategoryBinding(),
+    ),
+
+    GetPage(
       name: Routes.account_settingsScreen,
       page: () => const AccountSettingsScreen(),
       binding: AccountSettingsBinding(),
@@ -103,6 +125,7 @@ class RoutePageList {
 
     GetPage(
       name: Routes.categories_detailsScreen,
+      transition: Transition.rightToLeft,
       page: () => const CategoriesDetailsScreen(),
       binding: CategoriesDetailsBinding(),
     ),
@@ -144,18 +167,21 @@ class RoutePageList {
     ),
 
     GetPage(
+      transition: Transition.rightToLeft,
       name: Routes.servicesScreen,
       page: () => const ServicesScreen(),
       binding: ServicesBinding(),
     ),
 
     GetPage(
+      transition: Transition.rightToLeft,
       name: Routes.animalsScreen,
       page: () => const AnimalsScreen(),
       binding: AnimalsBinding(),
     ),
 
     GetPage(
+      transition: Transition.rightToLeft,
       name: Routes.new_and_used_productScreen,
       page: () => const NewAndUsedProductScreen(),
       binding: NewAndUsedProductBinding(),

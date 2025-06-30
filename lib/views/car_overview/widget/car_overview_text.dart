@@ -19,62 +19,7 @@ class CarOverviewText extends GetView<CarOverviewController> {
           padding: EdgeInsets.only(bottom: Dimensions.paddingSize * 0.4),
           child: TextWidget(
             onTap: () {
-              showModalBottomSheet(
-                context: context,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-                ),
-                isScrollControlled: true,
-                builder: (context) {
-                  final height = MediaQuery.of(context).size.height * 0.92;
-                  return Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(Dimensions.radius),
-                      color: CustomColor.whiteColor,
-                    ),
-                    height: height,
-                    padding: EdgeInsetsGeometry.symmetric(
-                      horizontal: Dimensions.defaultHorizontalSize,
-                      vertical: Dimensions.verticalSize,
-                    ),
-                    child: ListView(
-                      children: [
-                        TextWidget(
-                          Strings.carOverview,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        Divider(color: CustomColor.whiteShadeBlue),
-                        carOverViewALlData(Strings.bodyType, "SUV"),
-                        carOverViewALlData(Strings.exteriorColor, "WHITE"),
-                        carOverViewALlData(Strings.doors, "5+ doors"),
-                        carOverViewALlData(Strings.interioColor, "Brown "),
-                        carOverViewALlData(
-                          Strings.seatingCapacity,
-                          "5 Seater ",
-                        ),
-                        carOverViewALlData(Strings.fuelType, "Hybrid"),
-                        carOverViewALlData(Strings.engineCapacity, "1500-2000"),
-                        carOverViewALlData(Strings.horsepower, "100-200HP"),
-                        carOverViewALlData(Strings.noOfCylinders, "5"),
-                        carOverViewALlData(
-                          Strings.transmissionType,
-                          "Automatic Trs",
-                        ),
-                        carOverViewALlData(Strings.warranty, "Does Not Apply"),
-                        carOverViewALlData(Strings.targetMarket, "USA"),
-                        carOverViewALlData(Strings.year, "2025"),
-                        carOverViewALlData(Strings.kilimeters, "2"),
-                        carOverViewALlData(
-                          Strings.regionalSpecs,
-                          "chinese Spece",
-                        ),
-                        carOverViewALlData(Strings.sellerType, "Dealer"),
-                        carOverViewALlData(Strings.steering, "Dealer"),
-                      ],
-                    ),
-                  );
-                },
-              );
+              _overviewTextBottomInfo(context);
             },
             Strings.seeMore,
             color: CustomColor.primary,
@@ -83,6 +28,70 @@ class CarOverviewText extends GetView<CarOverviewController> {
           ),
         ),
       ],
+    );
+  }
+
+  Future<dynamic> _overviewTextBottomInfo(BuildContext context) {
+    return showModalBottomSheet(
+      context: context,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      isScrollControlled: true,
+      builder: (context) {
+        final height = MediaQuery.of(context).size.height * 0.92;
+        return Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(Dimensions.radius),
+            color: CustomColor.whiteColor,
+          ),
+          height: height,
+          padding: EdgeInsetsGeometry.symmetric(
+            horizontal: Dimensions.defaultHorizontalSize,
+            vertical: Dimensions.verticalSize,
+          ),
+          child: ListView(
+            children: [
+              Padding(
+                padding: EdgeInsetsGeometry.only(
+                  bottom: Dimensions.verticalSize * 0.5,
+                ),
+                child: Row(
+                  mainAxisAlignment: mainSpaceBet,
+                  children: [
+                    TextWidget(
+                      Strings.carOverview,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    GestureDetector(
+                      onTap: () => Get.back(),
+                      child: Icon(Icons.close),
+                    ),
+                  ],
+                ),
+              ),
+              Divider(color: CustomColor.whiteShadeBlue),
+              carOverViewALlData(Strings.bodyType, "SUV"),
+              carOverViewALlData(Strings.exteriorColor, "WHITE"),
+              carOverViewALlData(Strings.doors, "5+ doors"),
+              carOverViewALlData(Strings.interioColor, "Brown "),
+              carOverViewALlData(Strings.seatingCapacity, "5 Seater "),
+              carOverViewALlData(Strings.fuelType, "Hybrid"),
+              carOverViewALlData(Strings.engineCapacity, "1500-2000"),
+              carOverViewALlData(Strings.horsepower, "100-200HP"),
+              carOverViewALlData(Strings.noOfCylinders, "5"),
+              carOverViewALlData(Strings.transmissionType, "Automatic Trs"),
+              carOverViewALlData(Strings.warranty, "Does Not Apply"),
+              carOverViewALlData(Strings.targetMarket, "USA"),
+              carOverViewALlData(Strings.year, "2025"),
+              carOverViewALlData(Strings.kilimeters, "2"),
+              carOverViewALlData(Strings.regionalSpecs, "chinese Spece"),
+              carOverViewALlData(Strings.sellerType, "Dealer"),
+              carOverViewALlData(Strings.steering, "Dealer"),
+            ],
+          ),
+        );
+      },
     );
   }
 

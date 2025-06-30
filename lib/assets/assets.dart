@@ -103,6 +103,10 @@ class $Icons {
   String get police => 'assets/icons/police.png';
 
   String get profile => 'assets/icons/pp.png';
+  String get goArrow => 'assets/icons/goarrow.png';
+  String get home => 'assets/icons/home.svg';
+  String get menuNav => 'assets/icons/menuNav.svg';
+  String get inbox => 'assets/icons/inboxNav.svg';
 
   List<dynamic> get values =>
       [
@@ -117,6 +121,9 @@ class $Icons {
         acs,
         police,
         profile,
+        goArrow,
+        menuNav,
+        inbox,
       ];
 }
 

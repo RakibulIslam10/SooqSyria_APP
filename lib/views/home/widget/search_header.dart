@@ -10,7 +10,7 @@ class SearchHeader extends GetView<HomeController> {
         Expanded(
           child: Container(
             margin: EdgeInsets.only(right: Dimensions.widthSize * 1.2),
-            height: Dimensions.inputBoxHeight * 0.68,
+            height: Dimensions.inputBoxHeight * 0.6,
             padding: EdgeInsets.symmetric(horizontal: 15),
             decoration: BoxDecoration(
               color: CustomColor.whiteShadeColor,
@@ -24,7 +24,10 @@ class SearchHeader extends GetView<HomeController> {
                   color: CustomColor.blackColor,
                 ),
                 Sizes.width.v10,
-                TextWidget(Strings.search, fontSize: Dimensions.titleSmall),
+                TextWidget(
+                  Strings.search,
+                  fontSize: Dimensions.titleSmall * 0.8,
+                ),
               ],
             ),
           ),

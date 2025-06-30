@@ -5,9 +5,10 @@ class ButtonsWidget extends GetView<CarOverviewController> {
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
+    return Padding(
       padding: EdgeInsets.symmetric(
-        vertical: Dimensions.verticalSize,
+        horizontal: Dimensions.defaultHorizontalSize,
+        vertical: Dimensions.verticalSize * 0.5,
       ),
       child: Row(
         children: [
@@ -15,9 +16,7 @@ class ButtonsWidget extends GetView<CarOverviewController> {
             child: Container(
               height: Dimensions.heightSize * 3.8,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(
-                  Dimensions.radius * 0.8,
-                ),
+                borderRadius: BorderRadius.circular(Dimensions.radius * 0.8),
                 color: CustomColor.primary,
               ),
               padding: EdgeInsetsGeometry.symmetric(
@@ -28,15 +27,9 @@ class ButtonsWidget extends GetView<CarOverviewController> {
                 mainAxisAlignment: mainCenter,
 
                 children: [
-                  Icon(
-                    Icons.call_outlined,
-                    color: CustomColor.whiteColor,
-                  ),
+                  Icon(Icons.call_outlined, color: CustomColor.whiteColor),
                   Sizes.width.v5,
-                  TextWidget(
-                    Strings.call,
-                    color: CustomColor.whiteColor,
-                  ),
+                  TextWidget(Strings.call, color: CustomColor.whiteColor),
                 ],
               ),
             ),
@@ -47,9 +40,7 @@ class ButtonsWidget extends GetView<CarOverviewController> {
               height: Dimensions.heightSize * 3.2,
 
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(
-                  Dimensions.radius * 0.8,
-                ),
+                borderRadius: BorderRadius.circular(Dimensions.radius * 0.8),
                 color: CustomColor.primary,
               ),
               padding: EdgeInsetsGeometry.symmetric(
@@ -58,15 +49,9 @@ class ButtonsWidget extends GetView<CarOverviewController> {
               child: Row(
                 mainAxisAlignment: mainCenter,
                 children: [
-                  Icon(
-                    Icons.chat_outlined,
-                    color: CustomColor.whiteColor,
-                  ),
+                  Icon(Icons.chat_outlined, color: CustomColor.whiteColor),
                   Sizes.width.v5,
-                  TextWidget(
-                    Strings.chat,
-                    color: CustomColor.whiteColor,
-                  ),
+                  TextWidget(Strings.chat, color: CustomColor.whiteColor),
                 ],
               ),
             ),

@@ -9,11 +9,14 @@ class AssetsRes {
   static const String PROJECT_NAME = 'sooqyria';
   static const String PROJECT_VERSION = '1.0.0+1';
   static const String DOUBLE_CHECK = 'assets/icons/Double Check.svg';
-  static const String VECTOR = 'assets/icons/Vector.svg';
   static const String ACS = 'assets/icons/acs.png';
   static const String CALL_ICON = 'assets/icons/call icon.png';
   static const String GLOBAL = 'assets/icons/global.png';
+  static const String GOARROW = 'assets/icons/goarrow.png';
+  static const String HOME = 'assets/icons/home.svg';
+  static const String INBOXNAV = 'assets/icons/inboxNav.svg';
   static const String MENU = 'assets/icons/menu.svg';
+  static const String MENUNAV = 'assets/icons/menuNav.svg';
   static const String MESSAGE = 'assets/icons/message.svg';
   static const String POLICE = 'assets/icons/police.png';
   static const String PP = 'assets/icons/pp.png';

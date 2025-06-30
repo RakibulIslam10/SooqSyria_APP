@@ -6,32 +6,16 @@ class CarOverviewMobileScreen extends GetView<CarOverviewController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: CustomColor.whiteColor,
-        scrolledUnderElevation: 0,
-        leading: InkWell(
-          hoverColor: Colors.transparent,
-          splashColor: Colors.transparent,
-          highlightColor: Colors.transparent,
-          onTap: () => Get.back(),
-          child: Container(
-            margin: EdgeInsets.all(Dimensions.paddingSize * 0.25),
-            decoration: BoxDecoration(
-              color: CustomColor.primary,
-              shape: BoxShape.circle,
-            ),
-            child: Center(
-              child: Icon(
-                Icons.arrow_back_ios_new,
-                size: Dimensions.iconSizeLarge * 0.65,
-                color: CustomColor.whiteColor,
-              ),
-            ),
-          ),
-        ),
-      ),
+      extendBody: true,
+      extendBodyBehindAppBar: true,
+      appBar: AppBarWidget(title: ''),
       body: _bodyWidget(context),
+      bottomNavigationBar: Container(
+        color: Colors.transparent,
+        child: ButtonsWidget(),
+      ),
     );
+
   }
 
   _bodyWidget(BuildContext context) {
@@ -41,7 +25,6 @@ class CarOverviewMobileScreen extends GetView<CarOverviewController> {
           SliverToBoxAdapter(
             child: CarouselSliderWidget(controller: controller),
           ),
-
           SliverPadding(
             padding: Dimensions.defaultHorizontalSize.edgeHorizontal,
             sliver: SliverList(
@@ -54,7 +37,7 @@ class CarOverviewMobileScreen extends GetView<CarOverviewController> {
                 VisiteSellerWidget(),
                 LocationSectionWidget(),
                 SmillerCarWidgets(),
-                ButtonsWidget(),
+
               ]),
             ),
           ),

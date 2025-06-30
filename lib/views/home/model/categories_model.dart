@@ -1,23 +1,17 @@
+import '../../../languages/strings.dart';
+
 class CategoryModel {
   final String title;
   final String image;
 
-  CategoryModel({
-    required this.title,
-    required this.image,
-  });
+  CategoryModel({required this.title, required this.image});
 
-  factory CategoryModel.fromMap(Map<String, dynamic> map) {
-    return CategoryModel(
-      title: map['title'] ?? '',
-      image: map['image'] ?? '',
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'title': title,
-      'image': image,
-    };
-  }
+  static List<CategoryModel> categoryInfo = [
+    CategoryModel(title: Strings.vehicles, image: 'assets/images/Vehicles.png'),
+    CategoryModel(title: Strings.realEState, image: 'assets/images/home 1.png'),
+    CategoryModel(title: Strings.jobOffers, image: 'assets/images/job.png'),
+    CategoryModel(title: Strings.newAndUsedProduct, image: 'assets/images/bag 1.png'),
+    CategoryModel(title: Strings.animals, image: 'assets/images/pawprint 1.png'),
+    CategoryModel(title: Strings.services, image: 'assets/images/service.png'),
+  ];
 }

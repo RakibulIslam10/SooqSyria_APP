@@ -23,7 +23,7 @@ class MenusMobileScreen extends GetView<MenusController> {
           horizontal: Dimensions.defaultHorizontalSize,
           vertical: Dimensions.verticalSize * 0.4,
         ),
-        child: Column(
+        child: ListView(
           children: [
             MenuUserHeader(),
             AddsSearchesWidget(),

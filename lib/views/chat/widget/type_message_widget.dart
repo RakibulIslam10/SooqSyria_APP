@@ -28,7 +28,7 @@ class TypeMessageWidget extends GetView<ChatController> {
                     child: Padding(
                       padding: const EdgeInsets.all(12),
                       child: SvgPicture.asset(
-                        'assets/icons/Icon.svg',
+                        'assets/icons/inboxNav.svg',
                         fit: BoxFit.contain,
                         color: CustomColor.grayColor,
                       ),

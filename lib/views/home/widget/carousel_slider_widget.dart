@@ -12,14 +12,14 @@ class CarouselSliderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: CarouselSlider(
         carouselController: controller.carouselController,
         options: CarouselOptions(
           autoPlayAnimationDuration: Duration(seconds: 1),
           height: 140.h,
-          autoPlay: true,
+          autoPlay: false,
           aspectRatio: 1,
           viewportFraction: 1,
           onPageChanged: (index, reason) {

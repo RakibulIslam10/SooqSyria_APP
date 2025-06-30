@@ -11,21 +11,30 @@ class CarInfoModel {
     required this.distance,
   });
 
-  factory CarInfoModel.fromMap(Map<String, dynamic> map) {
-    return CarInfoModel(
-      image: map['image'] ?? '',
-      price: map['price'] ?? '',
-      title: map['title'] ?? '',
-      distance: map['distance'] ?? '',
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'image': image,
-      'price': price,
-      'title': title,
-      'distance': distance,
-    };
-  }
+  static List<CarInfoModel> carInfoList = [
+    CarInfoModel(
+      image: 'assets/images/car.png',
+      price: 'AED 120,000 ',
+      title: 'BYD HAN Extend',
+      distance: '2015 • 15Km',
+    ),
+    CarInfoModel(
+      image: 'assets/images/car2.png',
+      price: 'AED 98,000',
+      title: 'Tesla Model 3 ',
+      distance: '2020 • 12Km',
+    ),
+    CarInfoModel(
+      image: 'assets/images/car.png',
+      price: 'AED 120,000',
+      title: 'BYD HAN Extend',
+      distance: '2015 • 15Km',
+    ),
+    CarInfoModel(
+      image: 'assets/images/car2.png',
+      price: 'AED 98,000',
+      title: 'Tesla Model 3',
+      distance: '2020 • 12Km',
+    ),
+  ];
 }

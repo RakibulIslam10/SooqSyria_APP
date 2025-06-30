@@ -17,9 +17,9 @@ class NewOfferCard extends GetView<HomeController> {
           height: MediaQuery.of(context).size.width * 0.4,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: 10,
+            itemCount: 4,
             itemBuilder: (context, index) => Container(
-              width: MediaQuery.of(context).size.width * 0.8,
+              width: MediaQuery.of(context).size.width * 0.7,
               margin: EdgeInsets.only(right: 10),
               decoration: BoxDecoration(
                 image: DecorationImage(
