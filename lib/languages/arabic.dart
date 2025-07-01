@@ -198,7 +198,7 @@ Map<String, String> arabic =  {
   Strings.allIn: 'الكل في',
   Strings.model: 'الموديل',
   Strings.placeAnAdd: 'ضع إعلانًا',
-  Strings.tellUsAboutYourHousing: 'أخبرنا عن العقار الخاص بك',
+  Strings.tellUsAboutYour: 'أخبرنا عن العقار الخاص بك',
   Strings.whereShouldWePlaceYourAdd: 'أين يجب أن نضع إعلانك؟',
   Strings.selectCity: 'اختر مدينة',
   Strings.listingType: 'نوع القائمة',

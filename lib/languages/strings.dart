@@ -202,7 +202,7 @@ class Strings {
   static const String allIn = "All in";
   static const String model = "Model";
   static const String placeAnAdd = "Place an ad";
-  static const String tellUsAboutYourHousing = "Tell us about your Housing";
+  static const String tellUsAboutYour = "Tell us about your";
   static const String whereShouldWePlaceYourAdd =
       "Where should we place your add?";
   static const String selectCity = "Select a City";
@@ -281,5 +281,13 @@ class Strings {
   static const String neigHorhood = "Neighhorhood";
   static const String buldingOrStateName = "Building or state name";
   static const String chiceHowyouwantoLabelYourLocation = "Choice how you want to label your location";
+  static const String next = "Next";
+  static const String bodyTypes = "Body Type*";
+  static const String kilomiters = "Kilometers*";
+  static const String regionalSpace = "Regional Specs*";
+  static const String yar = "Year*";
+  static const String trim = "Trim**";
+  static const String makeModel = "Make & Model*";
+
 
 }

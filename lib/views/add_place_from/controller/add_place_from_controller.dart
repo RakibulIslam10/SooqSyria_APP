@@ -1,7 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
+import '../../home/model/categories_model.dart';
+
 class AddPlaceFromController extends GetxController {
+  late final args = Get.arguments;
+
+
   final listingTypeController = TextEditingController();
   final aleppoController = TextEditingController();
   final districtController = TextEditingController();

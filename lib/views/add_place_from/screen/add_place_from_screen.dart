@@ -8,10 +8,12 @@ import '../widget/add_place_input_widget.dart';
 part 'add_place_from_tablet_screen.dart';
 part 'add_place_from_mobile_screen.dart';
 part '../widget/app_bar_header.dart';
+part '../widget/re_use_heading.dart';
+
 
 
 class AddPlaceFromScreen extends GetView<AddPlaceFromController> {
-  const AddPlaceFromScreen({Key? key}) : super(key: key);
+  const AddPlaceFromScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

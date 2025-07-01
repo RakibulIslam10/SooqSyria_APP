@@ -12,20 +12,14 @@ class AddPlaceFromMobileScreen extends GetView<AddPlaceFromController> {
     return SafeArea(
       child: ListView(
         children: [
-          AppBarHeader(),
-          Padding(
-            padding: EdgeInsetsGeometry.symmetric(
-              horizontal: Dimensions.defaultHorizontalSize,
-              vertical: Dimensions.verticalSize * 0.4,
-            ),
-            child: Row(
-              children: [
-                TextWidget('Real State', color: CustomColor.primary),
-                TextWidget('> Housing'),
-              ],
-            ),
+          ReUseAppBarHeader(
+            '${Strings.tellUsAboutYour} ${controller.args['SelectedCategory']}',
           ),
-          InputAllFieldWidgets()
+          ReUseHeading(
+            controller.args['argTitle'],
+            controller.args['SelectedCategory'],
+          ),
+          InputAllFieldWidgets(),
         ],
       ),
     );

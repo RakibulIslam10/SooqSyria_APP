@@ -200,7 +200,7 @@ Map<String, String> english = {
   Strings.allIn: 'All in',
   Strings.model: 'Model',
   Strings.placeAnAdd: 'Place an ad',
-  Strings.tellUsAboutYourHousing: 'Tell us about your Housing',
+  Strings.tellUsAboutYour: 'Tell us about your Housing',
   Strings.whereShouldWePlaceYourAdd: 'Where should we place your add?',
   Strings.selectCity: 'Select a City',
   Strings.listingType: 'Listing Type',

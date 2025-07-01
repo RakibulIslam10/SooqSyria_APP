@@ -3,6 +3,18 @@ part of '../routes/routes.dart';
 class RoutePageList {
   static var list = [
     GetPage(
+      name: Routes.add_job_offer_formScreen,
+      page: () => const AddJobOfferFormScreen(),
+      binding: AddJobOfferFormBinding(),
+    ),
+    
+    GetPage(
+      name: Routes.car_add_formScreen,
+      page: () => const CarAddFormScreen(),
+      binding: CarAddFormBinding(),
+    ),
+
+    GetPage(
       name: Routes.location_addScreen,
       page: () => const LocationAddScreen(),
       binding: LocationAddBinding(),

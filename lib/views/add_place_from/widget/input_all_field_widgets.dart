@@ -16,10 +16,91 @@ class InputAllFieldWidgets extends GetView<AddPlaceFromController> {
             controller: controller.listingTypeController,
             hintText: Strings.listingType,
           ),
+          Sizes.height.betweenInputBox,
           AddPlaceInputWidget(
-            controller: controller.listingTypeController,
-            hintText: Strings.listingType,
+            controller: controller.aleppoController,
+            hintText: Strings.aleppo,
           ),
+          Sizes.height.betweenInputBox,
+          AddPlaceInputWidget(
+            controller: controller.districtController,
+            hintText: Strings.neighborhoodDristic,
+          ),
+          Sizes.height.betweenInputBox,
+          AddPlaceInputWidget(
+            controller: controller.propertyTypeController,
+            hintText: Strings.propertyType,
+          ),
+          Sizes.height.betweenInputBox,
+          AddPlaceInputWidget(
+            controller: controller.numberOfRoomController,
+            hintText: Strings.numberOfrooms,
+          ),
+          Sizes.height.betweenInputBox,
+          AddPlaceInputWidget(
+            controller: controller.areaController,
+            hintText: Strings.areaM,
+          ),
+          Sizes.height.betweenInputBox,
+          AddPlaceInputWidget(
+            controller: controller.propertyConditionController,
+            hintText: Strings.propertyCondition,
+          ),
+          Sizes.height.betweenInputBox,
+          AddPlaceInputWidget(
+            controller: controller.floorNumberController,
+            hintText: Strings.floorNumber,
+          ),
+          Sizes.height.betweenInputBox,
+          AddPlaceInputWidget(
+            controller: controller.totalFloorNumberController,
+            hintText: Strings.totalNumberOfFloors,
+            textInputType: TextInputType.number,
+          ),
+          Sizes.height.betweenInputBox,
+          AddPlaceInputWidget(
+            controller: controller.heatingTypeController,
+            hintText: Strings.heatingType,
+          ),
+          Sizes.height.betweenInputBox,
+          AddPlaceInputWidget(
+            controller: controller.furnishedController,
+            hintText: Strings.furnished,
+          ),
+          Sizes.height.betweenInputBox,
+          AddPlaceInputWidget(
+            controller: controller.bathroomsController,
+            hintText: Strings.numberOfBathrooms,
+            textInputType: TextInputType.number,
+          ),
+          Sizes.height.betweenInputBox,
+          AddPlaceInputWidget(
+            controller: controller.belconyController,
+            hintText: Strings.belconyAvailable,
+          ),
+          Sizes.height.betweenInputBox,
+          AddPlaceInputWidget(
+            controller: controller.maintenaceFeeController,
+            hintText: Strings.maintenaceFee,
+            textInputType: TextInputType.number,
+          ),
+          Sizes.height.betweenInputBox,
+
+          AddPlaceInputWidget(
+            controller: controller.priceController,
+            hintText: Strings.price,
+            textInputType: TextInputType.number,
+          ),
+          Sizes.height.betweenInputBox,
+
+          AddPlaceInputWidget(
+            controller: controller.phoneNumberOrSellerController,
+            hintText: Strings.phoneNumberOfTheSeller,
+            textInputType: TextInputType.number,
+          ),
+          Sizes.height.betweenInputBox,
+
+          PrimaryButton(title: Strings.next, onPressed: () {}),
         ],
       ),
     );

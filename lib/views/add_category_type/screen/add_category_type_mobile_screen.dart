@@ -1,21 +1,7 @@
 part of 'add_category_type_screen.dart';
 
 class AddCategoryTypeMobileScreen extends GetView<AddCategoryTypeController> {
-  AddCategoryTypeMobileScreen({super.key});
-
-  final List<String> categoriesList = [
-    "Abaart",
-    "Acura",
-    "Alfa Romeo",
-    "Alpine",
-    "Aston Martin",
-    "Audi",
-    "Bentley",
-    "BMW",
-    "Bugatti",
-    "Buick",
-    "BYD",
-  ];
+  const AddCategoryTypeMobileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +37,7 @@ class AddCategoryTypeMobileScreen extends GetView<AddCategoryTypeController> {
               padding: EdgeInsetsGeometry.only(
                 bottom: Dimensions.verticalSize * 0.2,
               ),
-              Strings.vehicles,
+              controller.categoryInfo.title,
               fontWeight: FontWeight.w600,
               color: CustomColor.blackColor,
             ),
@@ -76,15 +62,15 @@ class AddCategoryTypeMobileScreen extends GetView<AddCategoryTypeController> {
           children: [
             Sizes.height.v20,
             ...List.generate(
-              categoriesList.length,
+              controller.categoriesList.length,
               (index) => Column(
                 crossAxisAlignment: crossStart,
                 children: [
                   TextWidget(
                     onTap: () {
-                      Get.toNamed(Routes.add_place_fromScreen);
+                      controller.handleRoute(index);
                     },
-                    categoriesList[index],
+                    controller.categoriesList[index],
                     padding: EdgeInsetsGeometry.all(
                       Dimensions.verticalSize * 0.2,
                     ),
