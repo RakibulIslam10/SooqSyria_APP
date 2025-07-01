@@ -3,6 +3,24 @@ part of '../routes/routes.dart';
 class RoutePageList {
   static var list = [
     GetPage(
+      name: Routes.location_addScreen,
+      page: () => const LocationAddScreen(),
+      binding: LocationAddBinding(),
+    ),
+    
+    GetPage(
+      name: Routes.account_reportScreen,
+      page: () => const AccountReportScreen(),
+      binding: AccountReportBinding(),
+    ),
+    
+    GetPage(
+      name: Routes.cchange_passwordScreen,
+      page: () => const CchangePasswordScreen(),
+      binding: CchangePasswordBinding(),
+    ),
+    
+    GetPage(
       name: Routes.terms_conditionScreen,
       page: () => const TermsConditionScreen(),
       binding: TermsConditionBinding(),

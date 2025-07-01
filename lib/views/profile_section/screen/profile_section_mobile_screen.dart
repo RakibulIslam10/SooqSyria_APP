@@ -13,6 +13,96 @@ class ProfileSectionMobileScreen extends GetView<ProfileSectionController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: Container(
+        padding: EdgeInsetsGeometry.symmetric(
+          vertical: Dimensions.verticalSize * 0.4,
+        ),
+        margin: EdgeInsetsGeometry.symmetric(
+          horizontal: Dimensions.defaultHorizontalSize,
+          vertical: Dimensions.verticalSize * 2,
+        ),
+        decoration: BoxDecoration(
+          color: CustomColor.whiteColor,
+
+          borderRadius: BorderRadius.circular(Dimensions.radius * 1.5),
+          border: Border.all(color: CustomColor.whiteShade),
+        ),
+
+        child: GestureDetector(
+          onTap: () {
+            Get.dialog(
+              AlertDialog(
+                backgroundColor: CustomColor.whiteColor,
+                title: TextWidget(
+                  Strings.deleteAccount,
+                  fontSize: Dimensions.titleLarge,
+                  fontWeight: FontWeight.bold,
+                ),
+                content: TextWidget(
+                  Strings.deleteACountConfirmationTex,
+                  fontSize: Dimensions.titleSmall,
+                ),
+                actions: [
+                  Wrap(
+                    children: [
+                      Container(
+                        padding: EdgeInsetsGeometry.symmetric(
+                          horizontal: Dimensions.defaultHorizontalSize * 0.8,
+                        ),
+                        decoration: BoxDecoration(
+                          border: Border.all(color: CustomColor.whiteShade),
+                          borderRadius: BorderRadius.circular(
+                            Dimensions.radius * 2,
+                          ),
+                        ),
+                        child: TextButton(
+                          onPressed: () => Get.back(),
+                          child: TextWidget(
+                            Strings.no,
+                            fontSize: Dimensions.titleSmall,
+                          ),
+                        ),
+                      ),
+                      Sizes.width.v10,
+                      Container(
+                        padding: EdgeInsetsGeometry.symmetric(
+                          horizontal: Dimensions.defaultHorizontalSize * 0.8,
+                        ),
+                        decoration: BoxDecoration(
+                          color: Color(0xffFF3636),
+                          borderRadius: BorderRadius.circular(
+                            Dimensions.radius * 2,
+                          ),
+                        ),
+                        child: TextButton(
+                          onPressed: () => Get.back(),
+                          child: TextWidget(
+                            Strings.yes,
+                            fontSize: Dimensions.titleSmall,
+                            color: CustomColor.whiteColor,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            );
+          },
+          child: Row(
+            mainAxisAlignment: mainCenter,
+            children: [
+              Icon(Icons.delete_forever_outlined, color: CustomColor.rejected),
+              TextWidget(
+                Strings.deleteAccount,
+                color: CustomColor.rejected,
+                fontSize: Dimensions.titleSmall,
+                padding: EdgeInsetsGeometry.only(left: Dimensions.widthSize),
+              ),
+            ],
+          ),
+        ),
+      ),
       appBar: AppBarWidget(
         title: Strings.profile,
         titleColor: CustomColor.blackColor,

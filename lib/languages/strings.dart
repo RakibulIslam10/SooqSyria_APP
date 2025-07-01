@@ -261,4 +261,25 @@ class Strings {
   static const String privacyPolicy = "Privacy policy";
   static const String Vehicles = "VEHICLES";
   static const String saveChange = "Save Change";
+  static const String report = "Report";
+  static const String reportAccount = "Report Account";
+  static const String compyProfileURL = "Copy profile URL";
+  static const String deleteACountConfirmationTex = "Are you sure you want to delete your account?";
+  static const String fraud = "Fraud";
+  static const String attemtedScam = "Attempted Scam";
+  static const String impersonation = "Impersonation";
+  static const String fakeOrMisleadingImage = "Fake or Misleading Images";
+  static const String inappropriate = "Inappropriate Communication";
+  static const String duplicateListing = "Duplicate Listings / Spam";
+  static const String locationDetails = "Location Details";
+  static const String soldTemStillListed = "Sold Item Still Listed";
+  static const String pinnedLocation = "Pinned Location";
+  static const String addCustomevel = "Add Custom Level";
+  static const String work = "Work";
+  static const String saveAddress = "Save Address";
+  static const String apartmentOrVilaNumber = "Apartment or Vila number";
+  static const String neigHorhood = "Neighhorhood";
+  static const String buldingOrStateName = "Building or state name";
+  static const String chiceHowyouwantoLabelYourLocation = "Choice how you want to label your location";
+
 }

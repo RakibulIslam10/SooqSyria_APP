@@ -53,22 +53,18 @@ class MenusMobileScreen extends GetView<MenusController> {
                     Strings.accountSetting,
                     () => Get.toNamed(Routes.account_settingsScreen),
                   ),
-                  items(
-                    Assets.icons.global,
-                    Strings.languageCurrrency,
-
-                    () => Get.toNamed(Routes.profile_sectionScreen),
-                  ),
+                  items(Assets.icons.global, Strings.languageCurrrency, () {
+                    // Get.defaultDialog(
+                    //   title: Strings.recommendedListings,
+                    //   s
+                    // );
+                  }),
                   items(
                     Assets.icons.support,
                     Strings.support,
                     () => Get.toNamed(Routes.profile_sectionScreen),
                   ),
-                  items(
-                    Assets.icons.call,
-                    Strings.callUs,
-                    () => Get.toNamed(Routes.profile_sectionScreen),
-                  ),
+                  items(Assets.icons.call, Strings.callUs, () {}),
                   items(
                     Assets.icons.police,
                     Strings.policies,
